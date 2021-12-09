@@ -1,0 +1,15 @@
+test passwords:
+
+  admin:
+    log: admin
+    pass: admin
+
+  users: 
+    log: qwe
+    pass: 123
+
+    log: asd
+    pass: zxc
+
+    log: rty
+    pass: fgh
