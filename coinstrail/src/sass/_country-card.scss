@@ -1,0 +1,121 @@
+@import "variables";
+.country-card {
+    @include card-style;
+    overflow: hidden;
+    height: 100%;
+    padding: 10px;
+    &:hover {
+        @include card-hover;
+    }
+    &__img {
+        display: flex;
+        align-items: flex-start;
+        height: 300px;
+        border-top-right-radius: $bdrs-6;
+        border-top-left-radius: $bdrs-6;
+        overflow: hidden;
+    }
+    .no-img &__img {
+        background-color: #F6F6F6;
+        & > *{
+            margin: auto;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 50px 0 15px 0;
+        img {
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            width: 90px;
+            height: 90px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+        }
+    }
+    &__year,
+    &__title {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        text-align: center;
+    }
+    &__year {
+        color: $active-color;
+    }
+    &__title {
+        margin: 5px 0 0 0;
+        color: $main-color;
+    }
+}
+@media (max-width: 1539px) {
+    .country-card__img {
+        height: 260px;
+    }
+}
+
+@media (max-width: 959px) {
+    .country-card__img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 779px) {
+    .country-card__img {
+        height: calc(100vw / 2 - 85px);
+    }
+}
+
+@media (max-width: 639px) {
+    .country-card {
+        flex-direction: row;
+        padding: 5px;
+    }
+    .country-card__img {
+        width: 102px;
+        min-width: 102px;
+        height: 102px;
+        border-radius: $bdrs-6;
+    }
+    .country-card__desc {
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 0 0 34px;
+    }
+    .country-card__desc img {
+        top: 50%;
+        left: 0;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        width: 46px;
+        height: 46px;
+        border: 4px solid #fff;
+    }
+    .country-card__title {
+        margin: 1px 0 0 0;
+    }
+}
+@media (max-width: 479px) {
+    .country-card__year, .country-card__title {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        text-align: left;
+        letter-spacing: normal;
+    }
+}
+
+@media (max-width: 359px) {
+    .country-card__desc {
+        padding: 0 0 0 30px;
+    }
+}
+
+
+

@@ -1,0 +1,24 @@
+.not-found {
+    height: calc(100vh - 374px);
+    .container, &__wrap {
+        height: inherit;
+    }
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+        }
+        span{
+            display: block;
+            margin-top: 32px;
+            text-align: center;
+            font-size: calc(32px + (48 - 32) * (100vw - 320px) / (1340 - 320));
+            font-weight: bold;
+        }
+    }
+}

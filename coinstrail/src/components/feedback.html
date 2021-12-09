@@ -1,0 +1,43 @@
+<span class="feedback__title text-medium">Как мы можем помочь?</span>
+<form class="feedback">
+	<div class="feedback__item">
+		<label>Email <span class="red-star">*</span></label>
+		<input type="email" placeholder="Электронный адрес">
+		<div class="error-message hidden">
+			<p>dgfdgh@gm имеет неправильный формат</p>
+		</div>
+	</div>
+	<div class="feedback__item">
+		<label>Имя</label>
+		<input type="text" placeholder="Как к вам обращаться">
+	</div>
+	<div class="feedback__item">
+		<label>Напишите ваш вопрос <span class="red-star">*</span></label>
+		<textarea class="input-style service-date__input error" placeholder="Введите текст вопроса в это поле"></textarea>
+		<div class="message-info error">
+			<p>Сообщение: обязательно к заполнению</p>
+		</div>
+	</div>
+	<div class="feedback__item add-file">
+		<label>Прикрепить файл</label>
+		<label class="feedback__load-wrap">
+			<input name="file" type="file" name="file" id="feedback-add-file">
+			<span class="feedback__load-btn">Выбрать файл</span>
+			<span class="feedback__load-file js-feadback-loaded-file"></span>
+		</label>
+	</div>
+	<button class="feedback__btn btn-style">Отправить вопрос</button>
+	<div class="message-info done">
+		<p>Собщение отправлено</p>
+	</div>
+	<p class="feedback__footnote">
+		Нажимая кнопку «Отправить» я даю свое согласие
+		<span>на обработку персональных данных</span>
+	</p>
+</form>
+
+<script>
+	$('#feedback-add-file').change(function(e){
+		$('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+	});
+</script>

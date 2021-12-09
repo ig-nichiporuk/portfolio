@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Filter-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/filter-page.css?v.15">
+	@@include('../components/head-scripts.html')
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content filter-page">
+	<div class="container">
+		<div class="filter-page__wrap">
+			@@include('../components/breadcrumbs.html')
+			<div class="content__block-title">
+				<h1 class="text-medium">Расширенный поиск</h1>
+			</div>
+			<div class="filter-page__finder">
+				@@include('../components/finder-input.html', {
+					"placeholder": "Поиск по ключевым словам",
+				})
+				@@include('../components/finder-list.html', {
+					"link-to-filter-page": "hidden",
+				})
+			</div>
+			<div class="filter-page__not-found">
+				<p>К сожалению, поиск не дал результатов</p>
+				<p>Возможно, вы искали <a href="#">złotych 1875,</a> <a href="#">złotych 1875,</a> <a href="#">złotych 1875</a></p>
+			</div>
+			<div class="filter-page__analog">
+				<span class="filter-page__analog-title">Результат поиска по похожим запросам:</span>
+				<div class="filter-page__analog-body">
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "active",
+							"pass": "6"
+						})
+					</div>
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "active",
+							"pass": "6"
+						})
+					</div>
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "",
+							"pass": "0"
+						})
+					</div>
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "active",
+							"pass": "6"
+						})
+					</div>
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "active",
+							"pass": "6"
+						})
+					</div>
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "",
+							"pass": "0"
+						})
+					</div>
+					<div class="filter-page__analog-item">
+						@@include('../components/card-two-images.html', {
+							"this-auctions": "",
+							"country-item": "hidden",
+							"period-item": "hidden",
+							"edition-item": "",
+							"pass-active": "active",
+							"pass": "6"
+						})
+					</div>
+				</div>
+				<span class="filter-page__analog-btn">Показать ещё</span>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('../components/footer.html')
+</body>
+</html>

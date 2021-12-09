@@ -1,0 +1,39 @@
+<div class="modal__header">
+	Справочник работ
+	<span class="modal__close modalCloseJs"></span>
+</div>
+<div class="modal__main">
+	<table class="table table_service">
+		<thead>
+		<tr class="table__row">
+			<th class="cell__service-index">
+				<span>№</span><span> п/п</span>
+			</th>
+			<th class="cell__service-work">
+				<span>Наименование работ</span>
+			</th>
+			<th class="cell__service-price">
+				<span>
+					Стоимость,<span class="br"></span>
+					без НДС, руб.
+				</span>
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each services}}
+		<tr class="table__row">
+			<td class="cell__service-index">
+				<span>{{this.id}}</span>
+			</td>
+			<td class="cell__service-work">
+				<p>{{this.title}}</p>
+			</td>
+			<td class="cell__service-price">
+				<span class="text_bold">{{this.price}}</span>
+			</td>
+		</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>

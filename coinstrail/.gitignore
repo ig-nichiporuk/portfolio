@@ -1,0 +1,5 @@
+.idea
+*.php
+.DS_Store
+node_modules/
+Package-lock.json

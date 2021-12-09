@@ -1,0 +1,47 @@
+<div class="info">
+	{{> userInfo }}
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="controls">
+			<form class="controls__item" id="actsForm">
+				<input type="text" class="search input-style" placeholder="Поиск по номеру">
+			</form>
+		</div>
+
+
+
+		<table class="table table_acts">
+			<thead>
+			<tr class="table__row">
+				<th class="cell__act-month">
+					<span>Месяц</span>
+				</th>
+				<th class="cell__act-num">
+					<span>№&nbsp;документа</span>
+				</th>
+				<th class="cell__act-month-num">
+					<span>Месяц</span>
+					<span class="br"></span>
+					<span>/&nbsp;№&nbsp;документа</span>
+				</th>
+				<th class="cell__act-sum">
+					<span>Сумма, руб.</span>
+				</th>
+				<th class="cell__act-status">
+					<span>Статус</span>
+				</th>
+			</tr>
+			</thead>
+			<tbody class="actsTableBodyJs">
+			{{> acts/actsTable}}
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+<div class="modal-container">
+	<div class="modal modal_info modalJs" id="delete-act"></div>
+</div>

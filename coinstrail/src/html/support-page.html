@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('../components/head-meta.html', {"title": "Support-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/support-page.css?v.15">
+	@@include('../components/head-scripts.html')
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="support-page">
+	<div class="container">
+		@@include('../components/breadcrumbs.html')
+		<div class="support-page__content">
+			<div class="support-page__header">
+				<span class="support-page__header-title text-medium">Как мы можем помочь?</span>
+				<div class="support-page__header-finder">
+					@@include('../components/finder-input.html', {
+						"placeholder": "Поиск по ключевым словам",
+					})
+					@@include('../components/finder-list.html', {
+						"link-to-filter-page": "",
+					})
+				</div>
+			</div>
+			<div class="support-page__body">
+				<div class="support-page__body-faq">
+					<span class="faq__title text-medium">Популярные вопросы</span>
+					<div class="faq">
+						<div class="faq__item js-faq-wrap">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item js-faq-wrap">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item js-faq-wrap">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item js-faq-wrap">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item js-faq-wrap">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="support-page__body-form">
+					@@include('../components/feedback.html')
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('../components/footer.html')
+</body>
+<script>
+	$('.js-faq-btn').on('click', function () {
+		if($(this).hasClass('open')){
+			$('.js-faq-btn, .js-faq-wrap').removeClass('open');
+			$('.js-faq-body').slideUp(200, 'linear');
+		}
+		else {
+			$('.js-faq-btn, .js-faq-wrap').removeClass('open');
+			$('.js-faq-body').slideUp(200, 'linear');
+			$(this).addClass('open').closest('.js-faq-wrap').addClass('open');
+			$(this).addClass('open').next('.js-faq-body').slideDown(200, 'linear');
+		}
+	});
+</script>
+</html>

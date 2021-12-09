@@ -1,0 +1,15 @@
+@import "../fonts/stylesheet";
+@import "global-style";
+@import "header";
+@import "authorization";
+@import "user-info";
+@import "pagination";
+@import "controls";
+@import "table";
+@import "footer";
+@import "modal";
+@import "preloader";
+@import "not-found";
+.content {
+    padding-bottom: 120px;
+}

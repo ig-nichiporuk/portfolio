@@ -1,0 +1,16 @@
+{
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon --ignore sessions/ server.js localhost 3000"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"config": "^3.1.0",
+		"express": "^4.16.2",
+		"file-system": "^2.2.2",
+		"jsonwebtoken": "^8.5.1",
+		"morgan": "^1.9.0",
+		"nodemon": "^1.19.0",
+		"shortid": "^2.2.8"
+	}
+}

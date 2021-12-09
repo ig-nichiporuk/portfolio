@@ -1,0 +1,106 @@
+<div class="print">
+	<div class="print__info">
+		<span>Исполнитель: {{auth.name}}</span>
+	</div>
+	<br>
+	<div class="print__info">
+		<span>Заказчик: {{orderInfo.fio}}</span>
+	</div>
+	<br>
+	<div class="print__info">
+		<span>Плательщик: {{orderInfo.fio}}</span>
+	</div>
+	<br>
+	<div class="print__info">
+		<span>Основание: Договор №{{orderInfo.code_1c}}</span>
+	</div>
+	<br>
+	<span class="print__subtitle">
+		1. Общие сведения
+	</span>
+	<br>
+	<div class="print__info">
+		<span>Владелец автомобиля/клиент: {{orderInfo.fio}}</span>
+	</div>
+	<br>
+	<table class="print__table">
+		<thead>
+		<tr>
+			<th align="center">Марка, модель</th>
+			<th align="center">Регистрационный знак</th>
+			<th align="center">VIN либо номер кузова</th>
+			<th align="center">Год выпуска</th>
+			<th align="center">Пробег</th>
+			<th align="center">Прицеп</th>
+			<th align="center">Номерной знак прицепа</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td align="center">{{orderInfo.car}}</td>
+			<td align="center">{{orderInfo.reg_number}}</td>
+			<td align="center">-</td>
+			<td align="center">-</td>
+			<td align="center">-</td>
+			<td align="center">-</td>
+			<td align="center">-</td>
+		</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<span class="print__subtitle">
+		2. Выполненные работы
+	</span>
+	<br>
+	<table class="print__table">
+		<thead>
+		<tr>
+			<th align="center">Номер п/п</th>
+			<th align="center" width="500">Наименование</th>
+			<th align="center">Кол-во</th>
+			<th align="center">Стоимость, руб.коп.</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each formatOrderTasks}}
+			<tr>
+				<td align="center">{{array @index}}</td>
+				<td align="left">{{this.task_id}}</td>
+				<td align="center">{{this.amount}}</td>
+				<td align="center">{{this.task_total}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+		<tfoot>
+		<tr>
+			<td align="right" colspan="3">Итого на сумму (руб):</td>
+			<td align="center">{{@root.orderTotal}}</td>
+		</tr>
+		</tfoot>
+	</table>
+	<br>
+	<br>
+	<div class="print__info">
+		<span>Всего стоимость: {{@root.orderTotal}} руб.</span>
+	</div>
+	<p class="print__text">
+		Заказ-наряд оформил: {{auth.name}}
+	</p>
+	<br>
+	<br>
+	<p class="print__text">
+		Крепежные болты (гайки) затянуты в соответствии с техническими данными автомобиля в присутствии заказчика. С объемом работ и стоимостью заказа согласен. Претензий по качеству выполненных работ не имею:
+	</p>
+	<div class="print__signature">
+		<span class="text-bold">Владелец автомобиля: {{orderInfo.fio}}</span>
+	</div>
+	<br>
+	<br>
+	<br>
+	<p class="print__text">
+		Гарантийный срок: на техническое обслуживание - 20 дней или пробег не более 2000 км  с даты приемки механического транспортного средства потребителем в зависимости от того, какое из этих обстоятельств наступит раньше; на ремонт - 30 дней или пробег не более 2000 км с даты приемки механического транспортного средства потребителем в зависимости от того, какое из этих обстоятельств наступит раньше. Гарантия на используемые запчасти и материалы устанавливается в соответствии с ТНПА.
+		Гарантия на шиномонтажные работы и ремонт шин, при условии соблюдения ТКП 299-2011 "Автомобильные шины. Нормы и правила обслуживания" (Приказ Минтранса РБ №149-Ц от 21.03.2011г.)
+	</p>
+
+</div>

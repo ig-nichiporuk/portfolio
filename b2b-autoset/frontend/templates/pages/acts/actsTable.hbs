@@ -1,0 +1,28 @@
+{{#each acts}}
+	<tr class="table__row actsRowJs {{#ifCond this.status_id '===' '1'}}done{{/ifCond}}{{#ifCond this.status_id '===' '2'}}cancel{{/ifCond}}{{#ifCond this.status_id '===' '3'}}new{{/ifCond}}" data-code="{{this.code_1c}}">
+		<td class="cell__act-month">
+			<span>Апрель 2021</span>
+		</td>
+		<td class="cell__act-num">
+			<span>{{this.code_1c}}</span>
+		</td>
+		<td class="cell__act-month-num">
+			<span>Апрель 2021</span>
+			<span>{{this.code_1c}}</span>
+		</td>
+		<td class="cell__act-sum">
+			<span class="text_bold">{{this.sum}}</span>
+		</td>
+		<td class="cell__act-print {{#ifCond @root.auth.status '!==' '0'}} edited {{/ifCond}}">
+			<span class="text_medium">{{#ifCond this.status_id '===' '1'}}Закрыт{{/ifCond}}{{#ifCond this.status_id '===' '2'}}Отменен{{/ifCond}}{{#ifCond this.status_id '===' '3'}}Новый{{/ifCond}}</span>
+
+			{{#ifCond @root.auth.status '!==' '0'}}
+				<a href="delete-act" class="delete-item removeActsJs" data-status-scroll="0">
+					<svg>
+						<use xlink:href="#close"></use>
+					</svg>
+				</a>
+			{{/ifCond}}
+		</td>
+	</tr>
+{{/each}}

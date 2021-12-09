@@ -1,0 +1,69 @@
+[
+	{
+		"id": "1",
+		"code_1c": "BRB23981",
+		"sum": "2268.84",
+		"status_id": "1",
+		"login": "user00000450",
+		"unp": "391910404",
+		"attach": "acts\/2021-10-20\/hE7f8LssERZqVbHFDWNw6y5of6HFWuC8CMLld8fq.pdf",
+		"created_at": "2021-10-20 16:31:17",
+		"updated_at": "2021-10-20 16:31:17"
+	},
+	{
+		"id": "2",
+		"code_1c": "BRB23982",
+		"sum": "1358.12",
+		"status_id": "2",
+		"login": "user00000189",
+		"unp": "391079217",
+		"attach": "acts\/2021-10-20\/nRmyP7cICP1cWouTEvRteV72MOdiDVnyZEWGwdKe.pdf",
+		"created_at": "2021-10-20 16:31:17",
+		"updated_at": "2021-10-20 16:31:17"
+	},
+	{
+		"id": "3",
+		"code_1c": "BRB23983",
+		"sum": "3245.84",
+		"status_id": "1",
+		"login": "user00000450",
+		"unp": "391910404",
+		"attach": "acts\/2021-10-20\/hE7f8LssERZqVbHFDWNw6y5of6HFWuC8CMLld8fq.pdf",
+		"created_at": "2021-10-20 16:31:17",
+		"updated_at": "2021-10-20 16:31:17"
+	},
+
+	{
+		"id": "4",
+		"code_1c": "BRB23984",
+		"sum": "1956.02",
+		"status_id": "3",
+		"login": "user00000199",
+		"unp": "391079218",
+		"attach": "acts\/2021-10-20\/hE7f8LssERZqVbHFDWNw6y5of6HFWuC8CMLld8fq.pdf",
+		"created_at": "2021-10-20 16:31:17",
+		"updated_at": "2021-10-20 16:31:17"
+	},
+	{
+		"id": "5",
+		"code_1c": "BRB23985",
+		"sum": "768.45",
+		"status_id": "1",
+		"login": "user00000199",
+		"unp": "391079218",
+		"attach": "acts\/2021-10-20\/hE7f8LssERZqVbHFDWNw6y5of6HFWuC8CMLld8fq.pdf",
+		"created_at": "2021-10-20 16:31:17",
+		"updated_at": "2021-10-20 16:31:17"
+	},
+	{
+		"id": "6",
+		"code_1c": "BRB23986",
+		"sum": "1024.69",
+		"status_id": "2",
+		"login": "user00000199",
+		"unp": "391079218",
+		"attach": "acts\/2021-10-20\/hE7f8LssERZqVbHFDWNw6y5of6HFWuC8CMLld8fq.pdf",
+		"created_at": "2021-10-20 16:31:17",
+		"updated_at": "2021-10-20 16:31:17"
+	}
+]

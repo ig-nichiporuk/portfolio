@@ -1,0 +1,64 @@
+{{#each orders}}
+	<tr class="table__row {{#ifCond this.status_id '===' 'Новый'}}new{{/ifCond}}{{#ifCond this.status_id '===' 'Отменен'}}cancel{{/ifCond}}{{#ifCond this.status_id '===' 'Выполнен'}}done{{/ifCond}}">
+		<td class="cell__order-num">
+			<a href="#/order/{{this.id}}" class="link_blue">{{this.code_1c}}</a>
+		</td>
+		<td class="cell__order-type">
+			<span>{{this.type}}</span>
+		</td>
+		<td class="cell__order-type_order-num">
+			<span>{{this.type}}</span>
+			<a href="#/order/{{this.id}}" class="link_blue">{{this.code_1c}}</a>
+		</td>
+		<td class="cell__order-code"><span>{{this.code}}</span></td>
+		<td class="cell__date-add">
+			<span>{{this.created_at}}</span>
+		</td>
+		<td class="cell__date-close">
+			<span>{{this.closed_at}}</span>
+		</td>
+		<td class="cell__date-all">
+			<span>{{this.created_at}}</span>
+			<span>{{this.closed_at}}</span>
+		</td>
+		<td class="cell__user">
+			<span>{{this.fio}}</span>
+		</td>
+		<td class="cell__auto">
+			<span>{{this.car}}</span>
+		</td>
+		<td class="cell__user_auto">
+			<span>{{this.fio}}</span>
+			<span>{{this.car}}</span>
+		</td>
+		<td class="cell__auto-num">
+			<span>{{this.reg_number}}</span>
+		</td>
+		<td class="cell__price">
+			<span class="text_bold">{{this.sum}}</span>
+		</td>
+		<td class="cell__status">
+			<span class="text text_medium">{{this.status_id}}</span>
+		</td>
+		<td class="cell__status_print">
+			<div class="status-print__wrap">
+				<span class="text text_medium">{{this.status_id}}</span>
+			</div>
+		</td>
+		<td class="cell-left">
+			<span>{{this.type}} <a href="#/order/{{this.id}}" class="link_blue">{{this.code_1c}}</a> <span>{{this.code}}</span></span>
+			<span>{{this.fio}}</span>
+			<span>{{this.car}}</span>
+			<span>{{this.reg_number}}</span>
+		</td>
+		<td class="cell-right">
+			<span>{{this.created_at}}</span>
+			<span>{{this.closed_at}}</span>
+			<span class="text_bold">{{this.sum}}</span>
+			<div class="status-print__wrap">
+				<span class="text text_medium">{{this.status_id}}</span>
+			</div>
+		</td>
+	</tr>
+{{/each}}
+

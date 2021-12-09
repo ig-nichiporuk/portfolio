@@ -1,0 +1,129 @@
+@import "variables";
+.sidebar {
+    font-family: 'PT Root UI';
+    border-radius: $bdrs-6;
+    background-color: #fff;
+    &__item {
+        &-btn {
+            position: relative;
+            svg {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 12px;
+                right: 20px;
+                fill: $gray-text;
+                @include svg-rotate;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 19px;
+                right: 26px;
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $main-color;
+                transform: scale(0);
+            }
+            &.open {
+                font-weight: bold;
+                svg {
+                    @include svg-rotate-open
+                }
+            }
+            &.open-second {
+                svg {
+                    display: none;
+                }
+                &:before {
+                    transform: scale(1);
+                    @include transition;
+                }
+            }
+            .text-gray {
+                white-space: nowrap;
+            }
+        }
+        &-list {
+            display: none;
+        }
+    }
+    &__item + &__item {
+        @include list-border;
+    }
+    &__item &__item-btn:not(.open):hover,
+    .no-touch &__subitem &__item-btn:not(.open):hover,
+    &__subitem &__item-btn.open,
+    &__link:hover{
+        @include hover-bgc;
+    }
+    &__links {
+        display: none;
+    }
+    &__item-btn,
+    &__link {
+        display: block;
+        padding: 12px 40px 12px 20px;
+        font-size: 16px;
+        line-height: 21px;
+        color: $main-color;
+        cursor: pointer;
+        position: relative;
+    }
+    &__subitem &__item-btn {
+        padding: 12px 40px;
+        @include list-border;
+        &:before {
+            display: none;
+        }
+        &.open {
+            svg {
+                display: block;
+                fill: $main-color;
+                @include svg-rotate-open;
+            }
+        }
+    }
+    &__link {
+        padding: 12px 15px 12px 50px;
+        background-color: #f2f2f2;
+        &.active {
+            font-weight: bold;
+            letter-spacing: 0.2px;
+        }
+        &:active {
+            color: $active-color;
+        }
+        &-wrap {
+            border-top: 1px solid #e4e4e4;
+        }
+    }
+    &__mob{
+        &-title,
+         &-select {
+             display: none;
+         }
+        &-title {
+            white-space: nowrap;
+            margin: 0 20px 0 0;
+            font-size: 15px;
+            line-height: 21px;
+            color: $dark-color;
+
+        }
+        &-select {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1539px) and (min-width: 960px) {
+    .sidebar {
+        &__item-btn,
+        &__link {
+            font-size: 15px;
+        }
+    }
+}

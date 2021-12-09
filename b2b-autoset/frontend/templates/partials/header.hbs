@@ -1,0 +1,107 @@
+<div class="header__wrap {{#if request.resource}}header_inside{{/if}}">
+	<div class="header__main headerMainJs">
+		<div class="container">
+			<div class="header__main-wrapper">
+				<div class="header__main-logo">
+					<span>
+						<svg>
+							<use xlink:href="#autoset-small"></use>
+						</svg>
+					</span>
+				</div>
+				<ul class="header__links">
+					<li class="phone">
+						<svg class="phone">
+							<use xlink:href="#phone"></use>
+						</svg>
+						<a href="tel:+375295020151">+375 (29) 502-01-51</a>
+					</li>
+					<li class="email">
+						<svg class="email">
+							<use xlink:href="#email"></use>
+						</svg>
+						<a href="mailto:partners@autoset.by">partners@autoset.by</a>
+					</li>
+				</ul>
+				{{#if auth}}
+					<div class="header__cabinet dropdown dropdownWrapJs">
+						<div class="header__cabinet-btn dropdown__btn dropdownBtnJs">
+							<svg class="char">
+								<use xlink:href="#icon-user"></use>
+							</svg>
+							<span>Кабинет</span>
+							<svg class="arrow">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</div>
+						<div class="dropdown__body" >
+							<div class="dropdown__wrap">
+								<div class="user">
+									{{#ifCond auth.status '===' '0'}}
+										<span>Организация:</span><p>{{@root.auth.name}}</p>
+									{{/ifCond}}
+
+									{{#ifCond auth.status '===' '1'}}
+										<span>Пользователь:</span><p>{{@root.auth.name}}</p>
+									{{/ifCond}}
+								</div>
+
+								{{#ifCond auth.status '===' '1'}}
+									<div class="status"><span>Статус:</span><p>Администратор</p></div>
+								{{/ifCond}}
+
+								<a href="#" class="btn-style btn-style_red logOutJs">Выход</a>
+							</div>
+						</div>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+	<div class="header__links-mob">
+		<div class="container">
+			<ul class="header__links">
+				<li class="phone">
+					<svg class="phone">
+						<use xlink:href="#phone"></use>
+					</svg>
+					<a href="tel:+375295020151">+375 (29) 502-01-51</a>
+				</li>
+				<li class="email">
+					<svg class="email">
+						<use xlink:href="#email"></use>
+					</svg>
+					<a href="mailto:partners@autoset.by">partners@autoset.by</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	{{#if auth}}
+		<div class="header__full">
+			<div class="container">
+				<div class="header__full-wrapper">
+					<span class="header__full-logo">
+						<svg>
+							<use xlink:href="#autoset-big"></use>
+						</svg>
+					</span>
+					<nav class="header__nav">
+						<a href="#/orders/">
+							<svg>
+								<use xlink:href="#orders"></use>
+							</svg>
+							Заказы
+						</a>
+						<a href="#/acts/">
+							<svg>
+								<use xlink:href="#acts"></use>
+							</svg>
+							Акты
+						</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	{{/if}}
+
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="info__title">
+		<span class="info__order">
+			{{#ifCond request.resource '===' 'orders'}}Заказы{{/ifCond}}
+			{{#ifCond request.resource '===' 'acts'}}Акты выполненных работ{{/ifCond}}
+			{{#if request.id}}Заказ-наряд № {{formatOrderInfo.code_1c}}{{/if}}
+		</span>
+		<span class="info__user">{{auth.name}}</span>
+	</div>
+	{{#if request.id}}
+		<div class="info__data">
+			<ul class="userInfoBlockJs">
+				{{> userInfoData}}
+			</ul>
+			{{#ifCond auth.status '!==' '0'}}
+				{{#ifCond @root.formatOrderInfo.status_id '!==' 'Отменен'}}
+					<a href="edit-data" class="info__data-change openChangeInfoModalJs">
+						<svg>
+							<use xlink:href="#pencil"></use>
+						</svg>
+						изменить
+					</a>
+				{{/ifCond}}
+			{{/ifCond}}
+		</div>
+	{{/if}}
+
+</div>

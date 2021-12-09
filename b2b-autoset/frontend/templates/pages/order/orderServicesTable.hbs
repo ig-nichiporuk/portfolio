@@ -1,0 +1,31 @@
+<table class="table table_order">
+	<thead>
+	<tr class="table__row">
+		<th class="cell__order-index">
+			<span>№</span><span> п/п</span>
+		</th>
+		<th class="cell__order-work">
+			<span>Наименование работ</span>
+		</th>
+		<th class="cell__work-price">
+			<span>Цена, руб.</span>
+		</th>
+		<th class="cell__counter">
+			<span>Количество</span>
+		</th>
+		<th class="cell__total">
+			<span>Сумма, руб.</span>
+		</th>
+		<th class="cell-right">
+			<span>Цена</span>
+			<span>/&nbsp;Кол-во</span>
+			<span class="br"></span>
+			<span>/&nbsp;Сумма</span>
+		</th>
+	</tr>
+	</thead>
+	<tbody class="orderTasksTableBodyJs">
+		{{> orderTaskRow}}
+	</tbody>
+
+</table>

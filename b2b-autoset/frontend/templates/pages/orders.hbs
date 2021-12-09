@@ -1,0 +1,119 @@
+<div class="info">
+	{{> userInfo }}
+</div>
+<div class="content">
+	<div class="container">
+		{{#ifCond auth.status '!==' '0'}}
+			<div class="controls controls_admin">
+			<div class="controls__item">
+				<form class="unp-wrap" id="search-unp-num">
+					<div>
+						<label>УНП / Наименование</label>
+						<input type="text" class="input-style inputUnpNumJs" value="{{@root.unp}}">
+					</div>
+					<button type="submit" class="btn-style btn-style_green">Показать</button>
+				</form>
+			</div>
+			<div class="controls__item">
+				<a href="services-prices" class="link_blue openTasksModalJs">Справочник работ</a>
+			</div>
+		</div>
+		{{/ifCond}}
+		<div class="controls">
+			<div class="controls__item">
+				<label>Сортировать</label>
+				<select class="select-style" id="sort-orders">
+					<option value="up-date" {{#ifCond param '===' 'up-date'}}selected{{/ifCond}}>По возрастанию даты</option>
+					<option value="down-date" {{#ifCond param '===' 'down-date'}}selected{{/ifCond}}>По убыванию даты</option>
+					<option value="done" {{#ifCond param '===' 'done'}}selected{{/ifCond}}>Выполненные</option>
+					<option value="new" {{#ifCond param '===' 'new'}}selected{{/ifCond}}>Новые</option>
+					<option value="cancel" {{#ifCond param '===' 'cancel'}}selected{{/ifCond}}>Отмененные</option>
+				</select>
+			</div>
+			<div class="controls__item">
+				<form class="search__form" id="search-order-num">
+					<label class="search__label">
+						<input type="text" class="search__input input-style searchOrderNumJs" placeholder="Поиск по номеру" value="{{@root.num}}">
+						<button type="submit" class="search__find">
+							<svg>
+								<use xlink:href="#magnifying"></use>
+							</svg>
+						</button>
+					</label>
+					<button type="reset" class="search__reset resetOrderNumJs" disabled>
+						<svg>
+							<use xlink:href="#close"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+		<table class="table table_orders">
+			<thead>
+			<tr class="table__row">
+				<th class="cell__order-num">
+					<span>Номер</span>
+				</th>
+				<th class="cell__order-type">
+					<span>Тип</span>
+				</th>
+				<th class="cell__order-type_order-num">
+					<span>Тип / Номер</span>
+				</th>
+				<th class="cell__order-code"><span>Код</span></th>
+				<th class="cell__date-add">
+					<span>Дата <span class="br"></span>создания</span>
+				</th>
+				<th class="cell__date-close">
+					<span>Дата <span class="br"></span>закрытия</span>
+				</th>
+				<th class="cell__date-all">
+					<span>Даты</span>
+				</th>
+				<th class="cell__user">
+					<span>ФИО</span>
+				</th>
+				<th class="cell__auto">
+					<span>Марка</span>
+				</th>
+				<th class="cell__user_auto">
+					<span>ФИО / Марка</span>
+				</th>
+				<th class="cell__auto-num">
+					<span>Рег. номер</span>
+				</th>
+				<th class="cell__price">
+					<span>Сумма, руб.</span>
+				</th>
+				<th class="cell__status">
+					<span>Статус</span>
+				</th>
+				<th class="cell__status_print">
+					<span>Статус</span>
+				</th>
+				<th class="cell-left">
+					<span>Тип</span>
+					<span>/&nbsp;Номер</span>
+					<span>/ Код</span>
+					<span>/&nbsp;ФИО</span>
+					<span class="br"></span>
+					<span>/&nbsp;Марка</span>
+					<span>/&nbsp;Рег.&nbsp;номер</span>
+				</th>
+				<th class="cell-right">
+					<span>Даты</span>
+					<span>/&nbsp;Сумма</span>
+					<span class="br"></span>
+					<span>/&nbsp;Статус</span>
+				</th>
+			</tr>
+			</thead>
+			<tbody class="tableOrdersBodyJs">
+			{{> orders/ordersTable}}
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="modal-container">
+	<div class="modal modalJs modal_prices" id="services-prices"></div>
+</div>

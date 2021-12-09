@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('subset-PTRootUI-Regular.woff2') format('woff2'),
+        url('subset-PTRootUI-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('subset-PTRootUI-Medium.woff2') format('woff2'),
+        url('subset-PTRootUI-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('subset-Inter-Medium.woff2') format('woff2'),
+        url('subset-Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('subset-Inter-Regular.woff2') format('woff2'),
+        url('subset-Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('subset-PTRootUI-Bold.woff2') format('woff2'),
+        url('subset-PTRootUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('subset-Inter-SemiBold.woff2') format('woff2'),
+        url('subset-Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'lg';
+	src: url('lg.woff2') format('woff2'),
+	url('lg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'lg';
+	src: url('lg.woff2') format('woff2'),
+	url('lg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+

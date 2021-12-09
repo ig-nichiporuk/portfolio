@@ -1,0 +1,70 @@
+<div class="info">
+	{{> userInfo }}
+</div>
+<div class="content">
+	<div class="container">
+		<div class="controls">
+			{{#ifCond formatOrderInfo.status_id '!==' 'Отменен'}}
+				<div class="controls__item">
+					<label>Статус</label>
+					<select class="select-style orderStatusJs {{#ifCond @root.formatOrderInfo.status_id '===' 'Новый'}}in-process{{/ifCond}}{{#ifCond @root.formatOrderInfo.status_id '===' 'Выполнен'}}done{{/ifCond}}">
+						<option value="in-process" {{#ifCond @root.formatOrderInfo.status_id '===' 'Новый'}}selected{{/ifCond}}>Не выполнен</option>
+						<option value="done" {{#ifCond @root.formatOrderInfo.status_id '===' 'Выполнен'}}selected{{/ifCond}}>Выполнен</option>
+						<option value="cancel" {{#ifCond @root.formatOrderInfo.status_id '===' 'Отменен'}}selected{{/ifCond}}>Отменить</option>
+					</select>
+				</div>
+			{{/ifCond}}
+			<div class="controls__item">
+				<button class="btn-style btn-style_ghost btn-style_svg printOrderJs" disabled>
+					<span>
+						<svg>
+						    <use xlink:href="#print"></use>
+						</svg>
+						Печать
+					</span>
+				</button>
+			</div>
+		</div>
+
+		{{> order/orderServicesTable}}
+
+		{{#ifCond @root.auth.status '!==' '0'}}
+			{{#ifCond @root.formatOrderInfo.status_id '!==' 'Отменен'}}
+				<div class="table__add">
+					<a href="services-list" class="table__add-btn btn-style btn-style_green openTaskModalJS">
+						<svg>
+							<use xlink:href="#plus"></use>
+						</svg>
+					</a>
+				</div>
+			{{/ifCond}}
+		{{/ifCond}}
+
+		<div class="table__btns">
+			{{#ifCond formatOrderInfo.status_id '!==' 'Отменен'}}
+				<div class="table__btns-item">
+					<a href="change-service" class="btn-style btn-style_green saveOrderChanges" disabled="true">Сохранить</a>
+				</div>
+			{{/ifCond}}
+			<div class="table__btns-item">
+				<a href="#/orders/" class="btn-style btn-style_red">Закрыть</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-container">
+	<div class="modal modalJs" id="services-list"></div>
+</div>
+
+<div class="modal-container">
+	<div class="modal modal_info modalJs" id="delete-service"></div>
+</div>
+
+<div class="modal-container">
+	<div class="modal modal_info modalJs" id="change-service"></div>
+</div>
+
+<div class="modal-container">
+	<div class="modal modal_info modal_editor modalJs" id="edit-data"></div>
+</div>

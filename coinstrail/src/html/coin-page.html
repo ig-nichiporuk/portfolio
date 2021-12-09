@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Coin-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="css/photoswipe/default-skin.css">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/coin-page.css?v.15">
+	@@include('../components/head-scripts.html')
+	<script src="js/photoswipe/photoswipe.min.js"></script>
+	<script src="js/photoswipe/jqPhotoSwipe.min.js"></script>
+	<script src="js/photoswipe/photoswipe-ui-default.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/coin-page.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content coin-page__container">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__panel">
+				<div class="content__panel-stamping">
+					@@include('../components/stamping.html')
+				</div>
+				<div class="content__panel-sidebar">
+					@@include('../components/sidebar.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">1 грош 1930 WJ</h1>
+					<p>Описание монеты</p>
+				</div>
+				<div class="content__block-wrap">
+					<div class="coin-page">
+						<div class="coin-page__img">
+							<div class="coin-page__img-wrap">
+								<a href="img/webp/lot-coin.webp" class="coin-page__img-item js-lot-zoom" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
+									<img src="img/webp/lot-coin.webp" alt="coin">
+								</a>
+								<a href="img/webp/lot-coin-back.webp" class="coin-page__img-item js-lot-zoom" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
+									<img src="img/webp/lot-coin-back.webp" alt="coin">
+								</a>
+							</div>
+							<div class="coin-page__img-desc">
+								<p>Photo by: <span class="text-gray">Poznański Dom Aukcyjny & Podlaski Gabinet Numizmatyczny</span></p>
+							</div>
+						</div>
+						<div class="coin-page__specification">
+							<div class="coin-page__specification-item">
+								<span class="coin-page__specification-title text-medium">Техническая информация</span>
+								<ul class="coin-page__specification-list">
+										<li>
+											<span class="left">Металл</span>
+											<span class="right">Бронза</span>
+										</li>
+										<li>
+											<span class="left">Вес</span>
+											<span class="right">1,50 гр</span>
+										</li>
+										<li>
+											<span class="left">Диаметр</span>
+											<span class="right">14,7 мм</span>
+										</li>
+										<li>
+											<span class="left">Гурт</span>
+											<span class="right">Гладкий</span>
+										</li>
+										<li>
+											<span class="left">Отношение сторон</span>
+											<span class="right">—</span>
+										</li>
+										<li>
+											<span class="left">Тираж UNC</span>
+											<span class="right">22500000</span>
+										</li>
+										<li>
+											<span class="left">Цена металла</span>
+											<span class="right">0 USD</span>
+										</li>
+									</ul>
+							</div>
+							<div class="coin-page__specification-item">
+								<span class="coin-page__specification-title text-medium">Описание</span>
+								<ul class="coin-page__specification-list">
+										<li>
+											<span class="left">Страна</span>
+											<span class="right">Польша</span>
+										</li>
+										<li>
+											<span class="left">Период</span>
+											<span class="right">II Республика</span>
+										</li>
+										<li>
+											<span class="left">Номинал</span>
+											<span class="right">1 грош</span>
+										</li>
+										<li>
+											<span class="left">Год</span>
+											<span class="right">1930</span>
+										</li>
+										<li>
+											<span class="left">Правитель</span>
+											<span class="right">—</span>
+										</li>
+										<li>
+											<span class="left">Монетный двор</span>
+											<span class="right">Варшава</span>
+										</li>
+										<li>
+											<span class="left">Назначение</span>
+											<span class="right">Обращение</span>
+										</li>
+									</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content__block-wrap">
+					<div class="coin-page__tabs">
+							<span class="coin-page__tab active js-coin-info-tab" data-info="auctions">Цены на аукционах</span>
+							<span class="coin-page__tab js-coin-info-tab" data-info="varieties">Разновидности (3)</span>
+						</div>
+					<div class="coin-page__info js-coin-info-content">
+							<div class="coin-page__info-block  js-coin-info-block" data-block="auctions-block">
+								<span class="coin-page__info-title text-medium">Цены на аукционах</span>
+								<div class="auctions">
+									<div class="auctions__filter safety">
+										<div class="auctions__filter-title">Сохранность</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check" disabled="disabled">
+												<span class="checkbox__label-text">Нет оценки <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Нет оценки <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Нет оценки <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Нет оценки <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Нет оценки <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Нет оценки <span class="count">(888)</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="auctions__filter safety-easy">
+										<div class="auctions__filter-title">Сохранность (слабы)</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">DETAILS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">DETAILS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">DETAILS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">DETAILS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">DETAILS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">DETAILS <span class="count">(888)</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="auctions__filter suffix">
+										<div class="auctions__filter-title">Суффикс</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">CAMEO <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">CAMEO <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">CAMEO <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">CAMEO <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">CAMEO <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">CAMEO <span class="count">(888)</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="auctions__filter service">
+										<div class="auctions__filter-title">Сервис</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">PCGS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">PCGS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">PCGS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">PCGS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">PCGS <span class="count">(888)</span></span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">PCGS <span class="count">(888)</span></span>
+											</label>
+										</div>
+									</div>
+
+								</div>
+								<div class="auctions__select">
+									<label class="auctions__select-label text-medium">Аукционы</label>
+									<div class="auctions__select-wrap js-dropdown-wrap">
+										<div class="select-style__btn js-dropdown-btn">
+											<input type="text" placeholder="Все аукционы" readonly>
+										</div>
+										<ul class="select-style__body js-dropdown-body">
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(5)</span></span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+								<div class="auctions__cards">
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "current",
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "",
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+								</div>
+								<div class="auctions__select">
+									<label class="auctions__select-label text-medium">Года</label>
+									<div class="auctions__select-wrap js-dropdown-wrap">
+										<div class="select-style__btn js-dropdown-btn">
+											<input type="text" placeholder="1865-1935" readonly>
+										</div>
+										<ul class="select-style__body js-dropdown-body">
+											<li class="select-style__item">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+								@@include('../components/pagination.html')
+							</div>
+							<div class="coin-page__info-block hidden js-coin-info-block" data-block="varieties-block">
+								<span class="coin-page__info-title text-medium">Разновидности</span>
+								<div class="varieties__cards">
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"this-auctions": "current",
+											"country-item": "hidden",
+											"period-item": "hidden",
+											"edition-item": "",
+											"pass-active": "active",
+											"pass": "8"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"this-auctions": "",
+											"country-item": "hidden",
+											"period-item": "hidden",
+											"edition-item": "",
+											"pass-active": "",
+											"pass": "0"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"this-auctions": "",
+											"country-item": "hidden",
+											"period-item": "hidden",
+											"edition-item": "",
+											"pass-active": "active",
+											"pass": "5"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"this-auctions": "",
+											"country-item": "hidden",
+											"period-item": "hidden",
+											"edition-item": "",
+											"pass-active": "",
+											"pass": "0"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"this-auctions": "",
+											"country-item": "hidden",
+											"period-item": "hidden",
+											"edition-item": "",
+											"pass-active": "",
+											"pass": "0"
+										})
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('../components/footer.html')
+@@include('../components/toolbar.html')
+</body>
+</html>

@@ -1,0 +1,53 @@
+@import "variables";
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0 10px 2px;
+    &__item a,
+    &__item + &__item:before {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        color: $gray-text;
+    }
+    &__item {
+        display: flex;
+        position: relative;
+        a {
+            white-space: nowrap;
+            &:not(.active):hover {
+                color: $dark-color;
+            }
+        }
+        &.active {
+            a {
+                pointer-events: none;
+                color: $dark-color;
+                font-weight: 600;
+            }
+        }
+    }
+    &__item:not(:last-of-type) {
+        padding: 0 5px 0 0;
+    }
+    &__item + &__item {
+        padding: 0 5px 0 10px;
+        &:before {
+            content: '/';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+@media (max-width: 959px) {
+    .breadcrumbs {
+        &__item a,
+        &__item + &__item:before {
+            font-size: 12px;
+        }
+    }
+}
+

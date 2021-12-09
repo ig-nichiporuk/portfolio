@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Period-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/period-page.css?v.15">
+	@@include('../components/head-scripts.html')
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content period-page__container">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__panel">
+				<div class="content__panel-stamping">
+					@@include('../components/stamping.html')
+				</div>
+				<div class="content__panel-sidebar">
+					@@include('../components/sidebar.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Каталог монет II Республики (1919-1939)</h1>
+					<p>Всего 25859 лотов в каталоге</p>
+				</div>
+				<div class="content__block-wrap">
+					<div class="period-page__header">
+						<div class="period-page__header-img">
+							<img src="img/webp/king-jpg.webp" alt="king">
+						</div>
+						<div class="period-page__header-desc">
+							<span class="sup-text">Каталог монет</span>
+							<span class="title">II Республики</span>
+							<span class="years">1919-1939</span>
+						</div>
+					</div>
+					<div class="period-page__content">
+							<div class="period-page__cards">
+								<div class="period-page__card">
+									@@include('../components/period-card.html')
+								</div>
+								<div class="period-page__card">
+									@@include('../components/period-card.html')
+								</div>
+								<div class="period-page__card">
+									@@include('../components/period-card.html')
+								</div>
+								<div class="period-page__card">
+									@@include('../components/period-card.html')
+								</div>
+								<div class="period-page__card">
+									@@include('../components/period-card.html')
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="content__block-wrap">
+					<div class="period-page__stamping">
+						<span class="period-page__stamping-title">Годы чеканки</span>
+						<ul class="period-page__stamping-btns">
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+							<li class="period-page__stamping-btn"><a href="#">1956</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+	</div>
+</main>
+@@include('../components/footer.html')
+@@include('../components/toolbar.html')
+<script>
+	$('.js-period-card-show').on('click',function () {
+		if($(this).hasClass('open')){
+			$(this).removeClass('open').find('.text').text('Показать все');
+			$(this).find('.count').removeClass('hidden');
+			$(this).prev('.js-period-card-list').children().slice(3);
+			$(this).prev('.js-period-card-list').children().each(function (){
+				if($(this).index() > 5) {
+					$(this).removeAttr("style");
+				}
+			});
+		}
+		else {
+			$(this).addClass('open').find('.text').text('Свернуть');
+			$(this).find('.count').addClass('hidden');
+			$(this).prev('.js-period-card-list').children().css({'display' : 'block'});
+		}
+
+	});
+</script>
+</body>
+</html>
