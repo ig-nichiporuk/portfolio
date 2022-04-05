@@ -1,0 +1,78 @@
+<div class="container">
+		<div class="contacts__wrap">
+			<div class="contacts__filter">
+				{{> filter/filter }}
+			</div>
+			<div class="contacts__block js-contacts-block">
+				<div class="contacts__block-title">
+					<div class="js-title-wrap">
+						<h1 class="text-medium">Контакты</h1>
+						<a href="#/contact-add/" class="add-contact btn-style btn-style_blue">
+							<span>
+								<svg class="">
+									<use xlink:href="#user-plus"></use>
+								</svg>
+								Добавить контакт
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="contacts__block-wrap">
+					<div class="filter__btn-mob js-filter-mob-btn">
+						<svg>
+							<use xlink:href="#settings"></use>
+						</svg>
+						<span>Фильтр</span>
+					</div>
+					<div class="hashtags js-filter-hashtags">
+						{{#if optionsLSArr}}
+							<div class="hashtags__wrap">
+								{{#each optionsLSArr}}
+									<div class="hashtags__item">
+									<span class="btn-style btn-style_blue js-filter-delete-option">
+										{{this}}
+									</span>
+									</div>
+								{{/each}}
+								<div class="hashtags__cleaner js-filter-reset">
+								<span class="btn-style btn-style_gray js-filter-reset">
+									Очистить
+								</span>
+								</div>
+							</div>
+						{{/if}}
+					</div>
+					<div class="contacts__table">
+						{{> contactsInfo/contactsTable }}
+						<div class="contacts__controls js-contacts-control">
+							<span class="contacts__controls-total js-contacts-counter">Выбрано: 0 / 0</span>
+							<div class="contacts__controls-btns js-contacts-controls hidden">
+							<span class="delete js-delete-contact">
+								<svg>
+								    <use xlink:href="#trash-can"></use>
+								</svg>
+								Удалить
+							</span>
+								<div class="options hidden js-controls-options">
+									<span class="btn-style btn-style_blue js-delete-ok">Удалить</span>
+									<span class="btn-style btn-style_white js-delete-cancel">Отменить</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts__show js-show-items">
+						<span>Показать по:</span>
+						{{#if showContactsCount}}
+							<span class="items-count js-show-option {{#ifCond showContactsCount '==' '10'}} active {{/ifCond}}" data-show="10">10</span>
+							<span class="items-count js-show-option {{#ifCond showContactsCount '==' '20'}} active {{/ifCond}}" data-show="20">20</span>
+						{{else}}
+							<span class="items-count js-show-option active" data-show="10">10</span>
+							<span class="items-count js-show-option" data-show="20">20</span>
+						{{/if}}
+					</div>
+
+				</div>
+				{{> pagination/pagination }}
+			</div>
+		</div>
+	</div>

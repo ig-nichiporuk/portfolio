@@ -1,0 +1,15 @@
+$main-color: #172345;
+$dark-color: #32325D;
+$gray-color: #C4C4C4;
+$gray-text: #A8A8A8;
+$green-color: #517D58;
+$active-color: #2B2B9F;
+
+$bdrs-6: 6px;
+$bdrs-4: 4px;
+
+
+@mixin hover-bgc {
+    background-color: rgba(50, 50, 93, 0.15);
+}
+

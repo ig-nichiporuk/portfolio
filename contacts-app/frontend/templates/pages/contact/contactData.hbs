@@ -1,0 +1,405 @@
+<div class="contact__data">
+	<span class="contact__data-title">Личные данные</span>
+	<div class="contact__item">
+		{{#if type}}
+			<label class="contact__label">Фамилия:</label>
+		{{else}}
+			<label class="contact__label">Фамилия: <span class="star">*</span></label>
+		{{/if}}
+		<input
+				type="text"
+				class="input-style js-contact-input {{#if type}} edit {{/if}}"
+				id="surname"
+				placeholder="Ничипорук"
+				value="{{contact.surname}}"
+				{{#if type}}
+					readonly
+				{{/if}}>
+	</div>
+	<div class="contact__item">
+		{{#if type}}
+			<label class="contact__label">Имя:</label>
+		{{else}}
+			<label class="contact__label">Имя: <span class="star">*</span></label>
+		{{/if}}
+		<input
+				type="text"
+				class="input-style js-contact-input {{#if type}} edit {{/if}}"
+				id="name"
+				placeholder="Игорь"
+				value="{{contact.name}}"
+			{{#if type}}
+				readonly
+			{{/if}}>
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">Отчество:</label>
+		{{#if type}}
+			<input
+					type="text"
+					class="input-style js-contact-input edit"
+					id="patronymic"
+					value="{{#if contact.patronymic}}{{contact.patronymic}}{{else}}Не указано{{/if}}"
+					readonly>
+		{{else}}
+			<input
+					type="text"
+					class="input-style js-contact-input"
+					id="patronymic"
+					placeholder="Александрович"
+					value="{{contact.patronymic}}">
+		{{/if}}
+
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">Дата рождения:</label>
+			{{#if type}}
+				<input
+						type="text"
+						class="input-style js-contact-input edit"
+						{{#if contact.birthdate.day}}
+							value="{{contact.birthdate.day}}.{{contact.birthdate.month}}{{#if contact.birthdate.year}}.{{contact.birthdate.year}}{{else}}.----{{/if}}"
+						{{else}}
+							{{#if contact.birthdate.year}}
+								value="{{#if contact.birthdate.day}}{{contact.birthdate.day}}{{else}}--.{{/if}}{{contact.birthdate.month}}.{{contact.birthdate.year}}"
+							{{else}}
+							value="Не указана"
+							{{/if}}
+						{{/if}}
+						readonly>
+
+			{{else}}
+				<div class="contact__date">
+					<div class="contact__date-item">
+						<label class="contact__sublabel">День</label>
+						<input
+								type="text"
+								class="input-style js-contact-input"
+								id="birthday"
+								maxlength="2"
+								placeholder="22"
+								value="{{contact.birthdate.day}}">
+					</div>
+					<div class="contact__date-item">
+						<label class="contact__sublabel">Месяц</label>
+						<select name="month" id="month" class="select-style">
+							<option value="01" {{#ifCond contact.birthdate.month '==' '01'}} selected {{/ifCond}}>Январь</option>
+							<option value="02" {{#ifCond contact.birthdate.month '==' '02'}} selected {{/ifCond}}>Февраль</option>
+							<option value="03" {{#ifCond contact.birthdate.month '==' '03'}} selected {{/ifCond}}>Март</option>
+							<option value="04" {{#ifCond contact.birthdate.month '==' '04'}} selected {{/ifCond}}>Апрель</option>
+							<option value="05" {{#ifCond contact.birthdate.month '==' '05'}} selected {{/ifCond}}>Май</option>
+							<option value="06" {{#ifCond contact.birthdate.month '==' '06'}} selected {{/ifCond}}>Июнь</option>
+							<option value="07" {{#ifCond contact.birthdate.month '==' '07'}} selected {{/ifCond}}>Июль</option>
+							<option value="08" {{#ifCond contact.birthdate.month '==' '08'}} selected {{/ifCond}}>Август</option>
+							<option value="09" {{#ifCond contact.birthdate.month '==' '09'}} selected {{/ifCond}}>Сентябрь</option>
+							<option value="10" {{#ifCond contact.birthdate.month '==' '10'}} selected {{/ifCond}}>Октябрь</option>
+							<option value="11" {{#ifCond contact.birthdate.month '==' '11'}} selected {{/ifCond}}>Ноябрь</option>
+							<option value="12" {{#ifCond contact.birthdate.month '==' '12'}} selected {{/ifCond}}>Декабрь</option>
+						</select>
+					</div>
+					<div class="contact__date-item">
+						<label class="contact__sublabel">Год</label>
+						<input
+								type="text"
+								class="input-style js-contact-input"
+								id="year"
+								maxlength="4"
+								placeholder="1991"
+								value="{{contact.birthdate.year}}">
+					</div>
+				</div>
+			{{/if}}
+
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">Пол:</label>
+		{{#if type}}
+			<input
+					type="text"
+					class="input-style js-contact-input edit" value="{{#if contact.gender}}{{contact.gender}}{{else}}Не указан{{/if}}"
+					readonly>
+
+		{{else}}
+			<div class="contact__gender">
+				<label class="radio">
+					<input type="radio" name="gender" class="radio__input js-choose-option" id="gender-man" data-value="Мужской" {{#ifCond contact.gender '==' 'Мужской'}} checked {{/ifCond}}>
+					<span class="radio__text">Мужской</span>
+				</label>
+				<label class="filter__checkbox radio">
+					<input type="radio" name="gender" class="radio__input js-choose-option" id="gender-woman" data-value="Женский" {{#ifCond contact.gender '==' 'Женский'}} checked {{/ifCond}}>
+					<span class="radio__text">Женский</span>
+				</label>
+			</div>
+		{{/if}}
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">Семейное положение:</label>
+		{{#if type}}
+			<input
+					type="text"
+					class="input-style js-contact-input edit" value="{{#if contact.family}}Замужем / женат{{else}}Не замужем / Не женат{{/if}}"
+					readonly>
+
+		{{else}}
+			<div class="contact__data-family">
+				<label class="filter__checkbox checkbox">
+					<input type="checkbox" class="checkbox__input js-choose-option" id="family" data-value="Замужем / женат" {{#if contact.family}} checked {{/if}}>
+					<span class="checkbox__text">Замужем / женат</span>
+				</label>
+			</div>
+		{{/if}}
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">Место работы:</label>
+		{{#if type}}
+			<input
+					type="text"
+					class="input-style js-contact-input edit"
+					id="company"
+					placeholder="Работа"
+					value="{{#if contact.company}}{{contact.company}}{{else}}Не указано{{/if}}"
+					readonly>
+		{{else}}
+			<input
+					type="text"
+					class="input-style js-contact-input"
+					id="company"
+					placeholder="Работа"
+					value="{{contact.company}}">
+		{{/if}}
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">Страна:</label>
+		{{#if type}}
+			<input
+					type="text"
+					class="input-style js-contact-input edit"
+					id="country"
+					placeholder="Беларусь"
+					value="{{#if contact.country}}{{contact.country}}{{else}}Не указана{{/if}}"
+					readonly>
+		{{else}}
+			<input
+					type="text"
+					class="input-style js-contact-input"
+					id="country"
+					placeholder="Беларусь"
+					value="{{contact.country}}">
+		{{/if}}
+	</div>
+
+	{{#if type}}
+		<div class="contact__item">
+			<label class="contact__label">Адрес:</label>
+			<input
+					type="text"
+					class="input-style js-contact-input edit"
+					value="{{#if contact.city}}г. {{contact.city}}{{/if}}{{#if contact.street}}, ул. {{contact.street}} {{/if}}{{#if contact.house}}д. {{contact.house}}{{/if}}{{#if contact.apartment}}-{{contact.apartment}}{{/if}}"
+					readonly>
+		</div>
+		<div class="contact__item">
+			<label class="contact__label">Индекс:</label>
+			<input
+					type="text"
+					class="input-style js-contact-input edit"
+					value="{{#if contact.postcode}}{{contact.postcode}}{{else}}Не указан{{/if}}"
+					readonly>
+		</div>
+	{{else}}
+		<div class="contact__item">
+			<label class="contact__label">Город:</label>
+			<input
+					type="text"
+					class="input-style js-contact-input"
+					id="city"
+					placeholder="Брест"
+					value="{{contact.city}}">
+		</div>
+		<div class="contact__item">
+			<div class="contact__address">
+				<div class="contact__address-item">
+					<label class="contact__label">Улица:</label>
+					<input
+							type="text"
+							class="input-style js-contact-input"
+							id="street"
+							placeholder="Московская"
+							value="{{contact.street}}">
+				</div>
+				<div class="contact__address-item">
+					<label class="contact__label">Дом:</label>
+					<input
+							type="text"
+							class="input-style js-contact-input"
+							id="house"
+							maxlength="5"
+							placeholder="215"
+							value="{{contact.house}}"
+							{{#if contact.street}}{{else}}disabled{{/if}}>
+				</div>
+				<div class="contact__address-item">
+					<label class="contact__label">Квартира:</label>
+					<input
+							type="text"
+							class="input-style js-contact-input"
+							id="apartment"
+							maxlength="5"
+							placeholder="42Б"
+							value="{{contact.apartment}}"
+							{{#if contact.house}}{{else}}disabled{{/if}}>
+				</div>
+				<div class="contact__address-item">
+					<label class="contact__label">Индекс:</label>
+					<input
+							type="text"
+							class="input-style js-contact-input"
+							id="postcode"
+							maxlength="8"
+							placeholder="000000"
+							value="{{contact.postcode}}">
+				</div>
+			</div>
+		</div>
+	{{/if}}
+</div>
+<div class="contact__data">
+	<span class="contact__data-title">Контактные данные</span>
+	<div class="contact__item">
+		<label class="contact__label">Веб-сайт:</label>
+		{{#if type}}
+			<input
+					type="text"
+					class="input-style js-contact-input edit"
+					id="site"
+					placeholder="onliner.by"
+					value="{{#if contact.site}}{{contact.site}}{{else}}Не указан{{/if}}"
+					readonly>
+		{{else}}
+		<input
+				type="text"
+				class="input-style js-contact-input"
+				id="site"
+				value="{{contact.site}}"
+				placeholder="onliner.by">
+		<p class="error-msg">Используй: a-z, 0-9, '.', '-'</p>
+		{{/if}}
+	</div>
+	<div class="contact__item">
+		<label class="contact__label">E-mail:</label>
+		{{#if type}}
+			<input
+					type="email"
+					class="input-style js-contact-input edit"
+					id="email"
+					placeholder="igor_nichiporuk@gmail.com"
+					value="{{#if contact.email}}{{contact.email}}{{else}}Не указан{{/if}}"
+					readonly>
+		{{else}}
+		<input
+				type="email"
+				class="input-style js-contact-input"
+				id="email"
+				value="{{contact.email}}"
+				placeholder="igor_nichiporuk@gmail.com">
+		<p class="error-msg">Используй: a-z, 0-9, '_', '-', '.', '@'</p>
+		{{/if}}
+	</div>
+
+
+
+
+	{{#if type}}
+		{{#if (arrayLength contact.phones)}}
+			<div class="contact__item">
+				<label class="contact__label">Телефон:</label>
+				<ol>
+					{{#each contact.phones}}
+						<li>
+							<span>{{array @index}}.</span>
+							<div>
+								<p><a href="tel:{{this.number}}">{{this.number}}</a> - {{this.type}}</p>
+								{{#if this.desc}}
+									<p>{{this.desc}}</p>
+								{{/if}}
+							</div>
+						</li>
+					{{/each}}
+
+				</ol>
+			</div>
+		{{/if}}
+	{{else}}
+		<div class="contact__item">
+			<label class="contact__label">Телефон:</label>
+
+			{{#if (arrayLength contact.phones)}}
+
+				{{#each contact.phones}}
+					<div class="contact__phone js-contact-phone">
+						<div class="contact__phone-item">
+							<select name="phone-type" class="select-style">
+								<option value="домашний" {{#ifCond this.type '==' 'домашний'}} selected {{/ifCond}}>Домашний</option>
+								<option value="рабочий" {{#ifCond this.type '==' 'рабочий'}} selected {{/ifCond}}>Рабочий</option>
+								<option value="мобильный" {{#ifCond this.type '==' 'мобильный'}} selected {{/ifCond}}>Мобильный</option>
+							</select>
+						</div>
+						<div class="contact__phone-item">
+							<input
+									type="tel"
+									class="input-style js-contact-input"
+									id="phone"
+									placeholder="+37529111111"
+									maxlength="13"
+									value="{{this.number}}">
+						</div>
+						<div class="contact__phone-item">
+							<textarea name="phone-desc" class="input-style" placeholder="Комментарий">{{#if this.desc}}{{this.desc}}{{/if}}</textarea>
+						</div>
+					</div>
+				{{/each}}
+
+			{{else}}
+				<div class="contact__phone js-contact-phone">
+					<div class="contact__phone-item">
+						<select name="phone-type" class="select-style">
+							<option value="домашний">Домашний</option>
+							<option value="рабочий">Рабочий</option>
+							<option value="мобильный">Мобильный</option>
+						</select>
+					</div>
+					<div class="contact__phone-item">
+						<input
+								type="tel"
+								class="input-style js-contact-input"
+								id="phone"
+								placeholder="+37529111111"
+								maxlength="13">
+					</div>
+					<div class="contact__phone-item">
+						<textarea name="phone-desc" class="input-style" placeholder="Комментарий" disabled></textarea>
+					</div>
+				</div>
+			{{/if}}
+
+			<div class="contact__phone-add js-add-phone">
+				<span>
+					<svg>
+						<use xlink:href="#plus"></use>
+					</svg>
+					Добавить телефон
+				</span>
+			</div>
+		</div>
+
+	{{/if}}
+
+</div>
+<div class="contact__btns">
+	<a href="#/" class="btn-style btn-style_white">Назад</a>
+	{{#if type}}
+		<span class="btn-style btn-style_blue js-contact-edit">Редактировать</span>
+	{{else}}
+		<button class="btn-style btn-style_blue">Сохранить</button>
+	{{/if}}
+</div>
+

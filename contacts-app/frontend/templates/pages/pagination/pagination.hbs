@@ -1,0 +1,21 @@
+{{#ifCond @root.contactsDivideLength '>' '1'}}
+	<div class="pagination js-pagination">
+		<div class="pagination__prev js-prev-page {{#ifCond  @root.indexPage '==' '0'}}disabled{{/ifCond}}">
+			<svg >
+				<use xlink:href="#arrow-down"></use>
+			</svg>
+		</div>
+		<div class="pagination__pages">
+			<select name="" id="" class="select-style js-pagination-select">
+				{{#each @root.contactsDivide}}
+					<option value="{{array @index}}" {{#ifCond  @root.indexPage '==' @index}}selected{{/ifCond}}>{{array @index}}</option>
+				{{/each}}
+			</select>
+		</div>
+		<div class="pagination__next js-next-page {{#ifCond  @root.indexPageNumber '==' @root.contactsDivideLength}}disabled{{/ifCond}}">
+			<svg>
+				<use xlink:href="#arrow-down"></use>
+			</svg>
+		</div>
+	</div>
+{{/ifCond}}

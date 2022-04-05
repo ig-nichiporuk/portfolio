@@ -1,0 +1,21 @@
+.not-found {
+    display: flex;
+    min-height: 100vh;
+    max-height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    &__message {
+        text-align: center;
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 500;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 0 0;
+        a {
+            width: 200px;
+        }
+    }
+}

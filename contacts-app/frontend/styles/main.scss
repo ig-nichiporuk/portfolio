@@ -1,0 +1,253 @@
+@import "../fonts/stylesheet";
+@import "variables";
+@import "global";
+@import "pagination";
+@import "filter";
+@import "filter-hashtags";
+@import "contacts-table";
+@import "contact-data";
+@import "404";
+@import "modal";
+@import "preloader";
+
+.contacts{
+	&__wrap {
+        padding: 40px 0;
+		display: flex;
+		& > * {
+			width: 100%;
+		}
+		&.without-panel{
+			padding: 0;
+		}
+	}
+	&__filter {
+		width: 320px;
+		min-width: 320px;
+        margin: 80px 0 0 0;
+	}
+	&__block {
+		padding: 0 0 0 40px;
+		&-title {
+            margin-bottom: 32px;
+			& > * {
+				display: block;
+			}
+			h1 {
+				font-size: 40px;
+				line-height: 48px;
+				letter-spacing: -0.5px;
+				color: $dark-color;
+			}
+			p {
+				margin: 5px 0 0 1px;
+				font-size: 18px;
+				line-height: 27px;
+				letter-spacing: -0.1px;
+				color: $main-color;
+			}
+			& > div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.add-contact {
+					& > span {
+						font-size: inherit;
+						color: #fff;
+						position: relative;
+						padding-left: 28px;
+					}
+					svg {
+						position: absolute;
+						top: 50%;
+						margin-top: -10px;
+						left: 0;
+						width: 20px;
+						height: 20px;
+						fill: #fff;
+					}
+				}
+			}
+		}
+		&-wrap {
+			background-color: #fff;
+			padding: 24px 40px 60px;
+		}
+	}
+
+	&__controls {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 15px 0;
+		background-color: #fff;
+        &-total,
+        &-items{
+            font-size: 16px;
+            line-height: 40px;
+        }
+        &-counter {
+			font-size: 18px;
+			line-height: 25px;
+		}
+        &-btns{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+        }
+		.delete {
+			display: flex;
+			align-items: center;
+			svg	 {
+				margin-right: 4px;
+				width: 24px;
+				height: 24px;
+				fill: $dark-color
+			}
+			&:hover {
+				cursor: pointer;
+				color: $active-color;
+				svg {
+					fill: $active-color;
+				}
+			}
+		}
+        .options {
+            display: flex;
+            align-items: center;
+            .btn-style {
+                width: 120px;
+                line-height: 36px;
+                & + .btn-style {
+                    margin-left: 8px;
+                }
+            }
+        }
+		&.fix {
+			position: fixed;
+			width: 100%;
+			z-index: 5;
+			bottom: 0;
+			left: initial;
+			background-color: #fff;
+			transition: bottom .15s linear;
+            box-shadow: inset 0 1px 0 0 #858585;
+		}
+	}
+
+    &__show {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .items-count {
+            width: 32px;
+            line-height: 32px;
+            margin-left: 8px;
+            font-weight: 500;
+            border-radius: 4px;
+            text-align: center;
+            &.active {
+                color: #fff;
+                background-color: $active-color;
+            }
+            &:hover{
+                &:not(.active){
+                    cursor: pointer;
+                    @include hover-bgc;
+                }
+            }
+        }
+    }
+
+    &__table {
+        position: relative;
+        padding: 0 0 70px 0;
+    }
+}
+
+@media (max-width: 1539px) {
+	.contacts{
+		&__filter {
+			width: 270px;
+			min-width: 270px;
+		}
+		&__block {
+			padding: 0 0 0 24px;
+            &-wrap {
+                padding: 24px 24px 60px;
+            }
+		}
+	}
+
+}
+
+@media (max-width: 1299px) {
+	.contacts{
+        &__filter {
+            margin: 0;
+        }
+        &__wrap {
+            flex-direction: column;
+        }
+		&__block {
+            padding: 0;
+            &-wrap {
+                flex-direction: column;
+                padding: 16px 16px 48px;
+            }
+			&-title {
+				h1 {
+					font-size: 32px;
+					line-height: 45px;
+					letter-spacing: normal;
+				}
+				p {
+					margin: 5px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 779px) {
+	.content{
+		&__block {
+			&-title {
+				h1 {
+					font-size: 28px;
+					line-height: 32px;
+				}
+				p {
+					margin: 5px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 639px) {
+    .contacts{
+        &__wrap {
+            padding: 30px 0;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .contacts{
+        &__block {
+            &-title {
+                & > div {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    .add-contact {
+                        align-self: flex-end;
+                        margin: 15px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

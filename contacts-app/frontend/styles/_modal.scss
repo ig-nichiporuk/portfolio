@@ -1,0 +1,111 @@
+@import "variables";
+
+.modal {
+    display: block;
+    position: relative;
+    width: 680px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    border-radius: 6px;
+    padding: 0;
+    z-index: 100000;
+    transform: translate3d(0, 300px, 0);
+    opacity: 0;
+    transition: .3s;
+    visibility: hidden;
+    &_info {
+        width: 320px;
+        overflow: hidden;
+        background: none;
+    }
+    .modal-open &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+        position: relative;
+        transition: .3s;
+    }
+    &-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        visibility: hidden;
+        .modal-open & {
+            visibility: visible;
+            overflow: visible;
+            z-index: auto;
+            pointer-events: all;
+        }
+    }
+     &__main {
+         padding: 40px 24px;
+    }
+    &__header {
+        display: block;
+        position: relative;
+        padding-top: 24px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+        letter-spacing: 0.0042em;
+        color: $main-color;
+        text-align: center;
+    }
+    &__close {
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: 30px;
+        width: 24px;
+        height: 24px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.3455 20C19.2 20 18.9091 20 18.7636 19.8539L4.21818 5.24201C3.92727 4.94977 3.92727 4.51142 4.21818 4.21918C4.50909 3.92694 4.94545 3.92694 5.23636 4.21918L19.7818 18.8311C20.0727 19.1233 20.0727 19.5616 19.7818 19.8539C19.7818 20 19.4909 20 19.3455 20Z' fill='black'/%3E%3Cpath d='M4.8 20C4.65454 20 4.36364 20 4.21818 19.8539C3.92727 19.5616 3.92727 19.1233 4.21818 18.8311L18.7636 4.21918C19.0545 3.92694 19.4909 3.92694 19.7818 4.21918C20.0727 4.51142 20.0727 4.94977 19.7818 5.24201L5.23636 19.8539C5.23636 20 4.94545 20 4.8 20Z' fill='black'/%3E%3C/svg%3E%0A");
+        cursor: pointer;
+        &:hover, &:active {
+            background-color: rgba(0,0,0, .09);
+        }
+    }
+    &_info &__main {
+        background-color: #fff;
+    }
+    &_info &__main {
+        p {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 500;
+            letter-spacing: 0.0042em;
+            color: $main-color;
+            text-align: center;
+        }
+        p  + p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: normal;
+        }
+    }
+    &__footer {
+        display: flex;
+        .btn-style{
+            flex-grow: 1;
+            border-radius: 0;
+            font-size: 18px;
+            line-height: 24px;
+            padding: 16px 8px;
+            letter-spacing: 0.0042em;
+        }
+    }
+}
+
+
+
+
+

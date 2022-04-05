@@ -1,0 +1,133 @@
+<form class="filter js-filter">
+	<div class="filter__wrap js-filter-wrap">
+		<div class="filter__label">
+			<span>Фильтр</span>
+			<span class="close js-filter-mob-close">Отмена</span>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Фамилия:</span>
+				<div class="filter__input">
+					<svg>
+						<use xlink:href="#search"></use>
+					</svg>
+					<input type="text" id="surname" value="{{optionsLS.surname}}">
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Имя:</span>
+				<div class="filter__input">
+					<svg>
+						<use xlink:href="#search"></use>
+					</svg>
+					<input type="text" id="name" value="{{optionsLS.name}}">
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Отчество:</span>
+				<div class="filter__input">
+					<svg>
+						<use xlink:href="#search"></use>
+					</svg>
+					<input type="text" id="patronymic" value="{{optionsLS.patronymic}}">
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Год рождения:</span>
+				<div class="filter__range">
+					<input type="tel" placeholder="1991" id="year-min" maxlength="4" value="{{optionsLS.birthdateMin}}">
+					<span>-</span>
+					<input type="tel" placeholder="1993" id="year-max" maxlength="4" value="{{optionsLS.birthdateMax}}">
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Пол:</span>
+				<div class="filter__checkboxes">
+					<label class="filter__checkbox radio">
+						<input type="radio" name="gender" class="radio__input js-choose-option" id="gender-man" data-value="Мужской" {{#ifCond optionsLS.gender '==' 'Мужской'}} checked {{/ifCond}}>
+						<span class="radio__text">Мужской</span>
+					</label>
+					<label class="filter__checkbox radio">
+						<input type="radio" name="gender" class="radio__input js-choose-option" id="gender-woman" data-value="Женский" {{#ifCond optionsLS.gender '==' 'Женский'}} checked {{/ifCond}}>
+						<span class="radio__text">Женский</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Семейное положение:</span>
+				<div class="filter__checkboxes">
+					<label class="filter__checkbox checkbox">
+						<input type="checkbox" class="checkbox__input js-choose-option" id="family" data-value="Замужем / женат" {{#if optionsLS.family}} checked {{/if}}>
+						<span class="checkbox__text">Замужем / женат</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Страна:</span>
+				<div class="filter__input">
+					<svg>
+						<use xlink:href="#search"></use>
+					</svg>
+					<input type="text" id="country" value="{{optionsLS.country}}">
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Город:</span>
+				<div class="filter__input">
+					<svg>
+						<use xlink:href="#search"></use>
+					</svg>
+					<input type="text" id="city" value="{{optionsLS.city}}">
+				</div>
+			</div>
+		</div>
+		<div class="filter__item">
+			<div class="filter__block">
+				<span class="filter__title">Адрес:</span>
+				<div class="filter__address">
+					<div class="filter__address-item">
+						<div class="filter__input">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+							<input type="text" placeholder="Улица" id="street" value="{{optionsLS.street}}">
+						</div>
+					</div>
+					<div class="filter__address-item">
+						<div class="filter__input">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+							<input type="text" placeholder="Дом" id="house" maxlength="5" value="{{optionsLS.house}}">
+						</div>
+					</div>
+					<div class="filter__address-item">
+						<div class="filter__input">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+							<input type="text" placeholder="Квартира" id="apartment" maxlength="5" value="{{optionsLS.apartment}}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="filter__btn js-filter-btns">
+			<button class="btn-style btn-style_blue js-filter-show-btn" {{#if optionsLS}} {{else}} disabled {{/if}}>Найти</button>
+		</div>
+	</div>
+</form>

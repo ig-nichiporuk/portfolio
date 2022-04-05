@@ -1,0 +1,8 @@
+{
+	"database": {
+		"contacts": "./database/contacts.json"
+	},
+	"routes": {
+		"contacts": "./routes/contacts.js"
+	}
+}

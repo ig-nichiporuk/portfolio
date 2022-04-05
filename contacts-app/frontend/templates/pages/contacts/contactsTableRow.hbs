@@ -1,0 +1,49 @@
+<div class="table__row table__header">
+	<span class="table__cell"></span>
+	<span class="table__cell">
+			<span>ФИО</span>
+		</span>
+	<span class="table__cell">
+			<span>Дата рождения</span>
+		</span>
+	<span class="table__cell">
+			<span>Адрес</span>
+		</span>
+	<span class="table__cell">
+			<span>Компания</span>
+		</span>
+</div>
+<div class="table__row-group js-table-body">
+	{{#each showContacts}}
+		<a href="#/contact/{{this.id}}" class="table__row">
+			<span class="table__cell">
+				<span>
+					<label class="checkbox">
+						<input type="checkbox" class="checkbox__input js-contact-check" data-id="{{this.id}}">
+						<span class="checkbox__text"></span>
+					</label>
+				</span>
+			</span>
+			<span class="table__cell">
+				<span>{{this.surname}} {{this.name}}{{#if this.patronymic}} {{this.patronymic}}{{/if}}</span>
+			</span>
+			<span class="table__cell">
+				{{#if this.birthdate.day}}
+					<span>{{this.birthdate.day}}.{{this.birthdate.month}}{{#if this.birthdate.year}}.{{this.birthdate.year}}{{else}}.----{{/if}}</span>
+				{{else}}
+					{{#if this.birthdate.year}}
+						<span>{{#if this.birthdate.day}}{{this.birthdate.day}}.{{else}}--.{{/if}}{{this.birthdate.month}}.{{this.birthdate.year}}</span>
+					{{else}}
+						<span>Не указана</span>
+					{{/if}}
+				{{/if}}
+			</span>
+			<span class="table__cell">
+				<span>{{#if this.city}}г. {{this.city}}{{/if}}{{#if this.street}}, ул.&nbsp{{this.street}} {{/if}}{{#if this.house}}д.&nbsp{{this.house}}{{/if}}{{#if this.apartment}}&nbsp-&nbsp{{this.apartment}}{{/if}}</span>
+			</span>
+			<span class="table__cell">
+				<span>{{this.company}}</span>
+			</span>
+		</a>
+	{{/each}}
+</div>

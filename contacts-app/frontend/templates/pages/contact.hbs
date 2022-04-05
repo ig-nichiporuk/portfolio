@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="contacts__wrap">
+		<div class="contacts__block">
+			{{#if type}}
+				<div class="contacts__block-title">
+					<div>
+						<h1 class="text-medium js-contact-name">{{contact.surname}} {{contact.name}}</h1>
+					</div>
+				</div>
+			{{/if}}
+			<div class="contacts__block-wrap ">
+				<form class="contact js-contact-form">
+					{{> contactInfo/contactData}}
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

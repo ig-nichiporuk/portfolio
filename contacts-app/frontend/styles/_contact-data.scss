@@ -1,0 +1,223 @@
+@import "variables";
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+    &__data {
+        width: 47%;
+        &-title {
+            display: block;
+            font-size: 25px;
+            line-height: 32px;
+            font-weight: 500;
+            margin: 0 0 15px;
+        }
+    }
+    &__label,
+    &__sublabel{
+        display: block;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.2px;
+        .star {
+            color: #e2001a;
+        }
+    }
+
+    &__label {
+        margin: 0 0 5px 0;
+        font-weight: 500;
+    }
+
+    &__sublabel {
+        margin: 0 0 2px 0;
+        font-weight: 300;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        .select-style {
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: normal;
+            padding: 0 40px 0 8px
+        }
+        .input-style{
+            &.edit {
+                padding: 0;
+                border: none;
+                cursor: default;
+            }
+            & + .error-msg {
+                display: none;
+            }
+            &.error + .error-msg {
+                display: block;
+                margin: 5px 0 0;
+                font-size: 12px;
+                line-height: 12px;
+                color: #e2001a;
+            }
+        }
+        li {
+            display: flex;
+            align-items: baseline;
+            span {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            & > div {
+                margin: 0 0 0 5px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 20px;
+                & + p {
+                    font-size: 14px;
+                    line-height: 17px;
+                    font-weight: 300;
+                    margin: 5px 0 0 0;
+                }
+                a {
+                    color: $active-color;
+                }
+            }
+            & + li {
+                margin: 15px 0 0 0;
+            }
+        }
+    }
+    &__item + &__item {
+        margin: 20px 0 0 0;
+    }
+    &__gender {
+        display: flex;
+        .radio + .radio {
+            margin: 0 0 0 15px;
+        }
+    }
+    &__date,
+    &__address,
+    &__phone {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -5px;
+        &-item {
+            padding: 5px;
+        }
+    }
+
+    &__date {
+        &-item {
+            &:nth-child(1) {
+                width: 20%;
+            }
+            &:nth-child(2) {
+                width: 50%;
+            }
+            &:nth-child(3) {
+                width: 30%;
+            }
+        }
+    }
+
+    &__address {
+        flex-wrap: wrap;
+        &-item {
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                width: calc(100% / 3);
+            }
+            &:nth-child(1) {
+                width: 100%;
+            }
+        }
+    }
+    &__phone {
+        &-item {
+            &:nth-child(1),
+            &:nth-child(2) {
+                width: 50%;
+            }
+            &:nth-child(3) {
+                width: 100%;
+            }
+            textarea {
+                width: 100%;
+                height: 80px;
+                overflow: auto;
+                resize: none;
+                padding: 8px;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        &-add {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px 0 0;
+            & > span {
+                position: relative;
+                font-size: 14px;
+                line-height: 17px;
+                padding: 0 0 0 20px;
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -7px;
+                    left: 0;
+                    width: 14px;
+                    height: 14px;
+                    fill: $main-color
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                & > span {
+                    color: $active-color;
+                    svg {
+                        fill: $active-color;
+                    }
+                }
+            }
+
+        }
+    }
+    &__phone + &__phone {
+        margin: 10px -5px -5px;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 35px 0 0 0;
+        .btn-style {
+            width: 150px;
+        }
+        .btn-style + .btn-style {
+            margin: 0 0 0 15px;
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .contact {
+        flex-direction: column;
+        &__data {
+            width: 100%;
+        }
+
+        &__data + &__data {
+            margin: 40px 0 0;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+}

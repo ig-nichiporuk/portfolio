@@ -1,0 +1,24 @@
+<div class="contact__phone js-contact-phone">
+	<div class="contact__phone-item">
+		<select name="phone-type" class="select-style">
+			<option value="домашний">Домашний</option>
+			<option value="рабочий">Рабочий</option>
+			<option value="мобильный">Мобильный</option>
+		</select>
+	</div>
+	<div class="contact__phone-item">
+		<input
+				type="tel"
+				class="input-style js-contact-input {{#if contact}} edit {{/if}}"
+				id="phone"
+				placeholder="+37529111111"
+				maxlength="13"
+			{{#if contact}}
+				value="{{contact.site}}"
+				readonly
+			{{/if}}>
+	</div>
+	<div class="contact__phone-item">
+		<textarea name="phone-desc" class="input-style" placeholder="Комментарий" disabled></textarea>
+	</div>
+</div>
