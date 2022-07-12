@@ -1,0 +1,83 @@
+@import "../../../../styles/general-styles";
+
+:host {
+  $bg-color-timer: #f87e25;
+  $bg-color-create: #eef7ff;
+
+  $color-create: #2978b8;
+
+  .advertisement-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .title {
+      font-size: $font-size-medium;
+      line-height: 2.333rem;
+      font-weight: 500;
+      color: $primary-color;
+    }
+    .ad-user-flag {
+      font-size: $font-size-xsmall;
+      color: $color-copy;
+    }
+    .desc {
+      font-size: $font-size-medium;
+    }
+    .id {
+      font-size: $font-size-xsmall;
+      font-weight: 400;
+    }
+
+    .desc,
+    .id {
+      color: $color-copy;
+    }
+  }
+
+  .advertisement-timer,
+  .advertisement-created {
+    display: flex;
+    align-items: center;
+    padding: 0 0.667rem;
+    border-radius: 0.333rem;
+    span {
+      line-height: 2.333rem;
+    }
+    &__icon {
+      @include advertisement-icon-size;
+      font-size: 1.4rem;
+      margin: 0 0.5rem 0 0;
+    }
+  }
+
+  .advertisement-timer {
+    background-color: $bg-color-timer;
+    color: $color-white;
+  }
+
+  .advertisement-created {
+    background-color: $bg-color-create;
+    color: $color-create;
+  }
+
+  .create-id-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create {
+    color: $color-copy;
+    font-size: $font-size-xsmall;
+    font-weight: 400;
+    margin-right: .8rem;
+  }
+
+  .title-id-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+  }
+}

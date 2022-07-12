@@ -1,0 +1,167 @@
+@import "../../../../styles/general-styles";
+
+:host {
+  .advertisement-wrap {
+    padding: $offset-xlarge 0;
+    display: flex;
+    column-gap: $offset-xlarge;
+
+    &__img {
+      width: 28rem;
+      height: 16rem;
+      @media only screen and (max-width: $medium-large-screen-min-width) {
+        width: 20rem;
+      }
+      @media only screen and (max-width: $medium-x-screen-min-width) {
+        width: 100%;
+        height: 44rem;
+      }
+      @media only screen and (max-width: $medium-screen-min-width) {
+        width: 100%;
+        height: 32rem;
+      }
+      @media only screen and (max-width: $medium-s-screen-min-width) {
+        width: 100%;
+        height: 26rem;
+      }
+      @media only screen and (max-width: $small-medium-screen-min-width) {
+        width: 100%;
+        height: 22rem;
+      }
+      @media only screen and (max-width: 0) {
+        width: 100%;
+        height: 16rem;
+      }
+
+      img {
+        display: block;
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
+    }
+
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-grow: 1;
+      @media only screen and (max-width: $medium-x-screen-min-width) {
+        margin-top: $offset-xlarge;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 33rem;
+      @media only screen and (max-width: $medium-xlarge-screen-min-width) {
+        width: 100%;
+        width: 28rem;
+      }
+      @media only screen and (max-width: $medium-large-screen-min-width) {
+        width: 100%;
+        width: 23rem;
+      }
+      @media only screen and (max-width: $medium-x-screen-min-width) {
+        width: 100%;
+        margin-top: $offset-xlarge;
+      }
+    }
+
+    &__quantity,
+    &__location {
+      display: flex;
+      align-items: center;
+      .advertisement-quantity-icon,
+      .advertisement-pointer-icon {
+        width: 1.667rem;
+        height: 1.667rem;
+        margin: 0 $offset-small 0 0;
+        color: #798787;
+      }
+      p {
+        margin: 0;
+        font-size: $font-size-normal;
+        line-height: 2rem;
+        color: $primary-color;
+      }
+    }
+    &__quantity {
+      margin: auto 0 $offset-normal;
+    }
+
+    .advertisement {
+      &-moderators_message {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin-top: $offset-normal;
+        padding: $offset-small;
+        width: 100%;
+        max-height: 6.5rem;
+        overflow-x: hidden;
+        font-size: $font-size-small;
+        border-radius: $border-radius;
+        background-color: $bg-color-info-toast;
+        border: 1px solid $border-color-info-toast;
+
+        &-rejected {
+          background-color: $bg-color-error-toast;
+          border: 1px solid $border-color-error-toast;
+        }
+
+        &-content {
+          color: $primary-color;
+          width: 100%;
+          padding: 0 0 0 1rem;
+          margin: 0;
+        }
+
+        &-icon {
+          &-rejected {
+            color: $color-error;
+            align-self: center;
+          }
+        }
+
+        &-bottom-wrap {
+          display: flex;
+          flex-direction: column;
+          overflow-x: hidden;
+          overflow-y: auto;
+          position: relative;
+          width: calc(100% - 35px);
+        }
+        ::-webkit-scrollbar {
+          width: 0.666rem;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: $scroll-bar-track-color;
+          border-radius: $border-radius;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: $color-copy;
+          border-radius: $border-radius;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: $color-copy;
+        }
+      }
+    }
+  }
+}
+
+.advertisement-wrap {
+  display: flex;
+  &:hover &__btns {
+    display: block;
+  }
+  @media only screen and (max-width: $medium-x-screen-min-width) {
+    flex-direction: column;
+  }
+}

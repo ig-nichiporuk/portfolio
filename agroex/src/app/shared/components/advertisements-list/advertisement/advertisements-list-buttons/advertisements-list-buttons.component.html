@@ -1,0 +1,34 @@
+<div
+  class="advertisement-wrap__btns"
+  *ngIf="user?.id !== advertisement?.author?.id"
+  (click)="stopPropagation($event)"
+>
+  <div class="advertisement-btns">
+    <div class="advertisement-btn">
+      <button
+        *ngIf="
+        !advertisement.userBets[0] ||
+        +advertisement.userBets[0].betValue + 1 < +advertisement.price
+      "
+        mat-button
+        class="btn_ghost"
+        (click)="openBetModal()"
+      >
+        <mat-icon
+          svgIcon="bet-icon"
+          class="advertisement-btns__icon"
+        ></mat-icon>
+        <span>My bet</span>
+      </button>
+    </div>
+    <div class="advertisement-btn">
+      <button mat-button (click)="onSetBuy()">
+        <mat-icon
+          svgIcon="caret-icon"
+          class="advertisement-btns__icon"
+        ></mat-icon>
+        <span>Buy now</span>
+      </button>
+    </div>
+  </div>
+</div>

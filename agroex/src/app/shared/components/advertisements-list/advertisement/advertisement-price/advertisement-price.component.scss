@@ -1,0 +1,76 @@
+@import "../../../../../styles/general-styles";
+@import "../../styles/advertisement-const";
+
+:host {
+  .advertisement-price {
+    display: flex;
+    justify-content: flex-end;
+    @include advertisement-margin-for-price-buttons;
+
+    &-item {
+      @include advertisement-gap-for-price-buttons;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+    .label,
+    .value,
+    .per-item {
+      display: block;
+    }
+    .label,
+    .per-item {
+      color: $color-copy;
+    }
+    .label {
+      font-size: 0.833rem;
+    }
+
+    .value,
+    .no-bets {
+      line-height: 2.667rem;
+      margin: $offset-small 0 0 0;
+    }
+    .value {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: $font-size-large;
+      font-weight: 500;
+    }
+
+    .no-bets {
+      font-size: $font-size-normal;
+      color: #bcc3c3;
+    }
+
+    &__bet {
+      width: 50%;
+    }
+    .value {
+      color: #f87e25;
+    }
+
+    &__total .value {
+      color: $primary-color;
+    }
+  }
+
+  .unit-price {
+    color: $color-copy;
+    font-size: $font-size-xsmall;
+  }
+
+  .bet-hint {
+    font-size: $font-size-xsmall;
+    line-height: 1.333rem;
+    color: $color-copy;
+    margin-top: 1.2rem;
+  }
+
+  @include advertisement-disabled
+}

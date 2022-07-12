@@ -1,0 +1,40 @@
+<ng-container *ngIf="categoriesLoadingStatus?.loaded; else notLoaded">
+  <app-header
+    [user]="user"
+    [userRole]="userRole"
+    [notificationMessage]="notificationMessage"
+    (addNotificationMessage)="onAddNotificationMessage($event)"
+    (changeNotificationStatus)="onClickNotification($event)"
+    (logout)="onLogout()"
+    (selectTab)="onSelectTab($event)"
+  ></app-header>
+
+  <app-categories
+    [categories]="categories"
+    [categoriesLoadingStatus]="categoriesLoadingStatus"
+    [user]="user"
+    [advertisementsRequest]="advertisementsRequest"
+    [advertisementsLoadingStatus]="advertisementsLoadingStatus"
+    [selectCategoryTabTitle]="selectCategoryTabTitle"
+    (setBet)="onSetBet($event)"
+    (setBuy)="onSetBuy($event)"
+    (selectCategoryTab)="onSelectCategoryTab($event)"
+  >
+  </app-categories>
+</ng-container>
+
+<ng-template #notLoaded>
+  <ngx-spinner
+    *ngIf="categoriesLoadingStatus?.loading; else categoriesError"
+    bdColor="rgba(0, 0, 0, 0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-clip-rotate"
+    [fullScreen]="true"
+  >
+    <div style="color: white">Loading...</div>
+  </ngx-spinner>
+  <ng-template #categoriesError>
+    <p>{{ categoriesLoadingStatus?.error?.statusText }}</p>
+  </ng-template>
+</ng-template>

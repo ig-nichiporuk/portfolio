@@ -1,0 +1,24 @@
+@import "../../../../styles/general-styles";
+
+:host {
+  .category {
+    &__title {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin: 0 0 0 1rem;
+    }
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      color: #798787;
+
+      .mat-tab-label-active & {
+        color: $active-color;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  @include mat-tab-styles;
+}

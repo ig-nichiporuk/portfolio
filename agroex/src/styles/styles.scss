@@ -1,0 +1,297 @@
+@import "@angular/material/theming";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@import "./theme-styles";
+@import "../app/styles/reusable_components/reusable_components.scss";
+@import "../app/styles/general-styles.scss";
+
+@import "~mapbox-gl/dist/mapbox-gl.css";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "IBM Plex Sans", serif;
+  line-height: normal;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100%;
+  min-width: $small-screen-min-width;
+  margin: 0;
+  background-color: $main-background-color;
+}
+
+.container {
+  width: 100%;
+  padding: 0 5vw;
+  margin: 0 auto;
+}
+
+.bet-modal {
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .mat-form-field-label-wrapper {
+    top: -0.8em;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-prefix,
+  .mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: 0;
+    font-size: $font-size-normal;
+    color: $primary-color;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    top: 0;
+  }
+
+  .mat-form-field-prefix {
+    margin-right: $offset-small;
+  }
+}
+
+.bet-modal,
+.bet-form-container {
+  .mat-form-field-invalid.mat-form-field-appearance-outline
+    .mat-form-field-wrapper
+    .mat-form-field-subscript-wrapper {
+    display: none;
+  }
+}
+
+.bet-modal-container {
+  .mat-dialog-container {
+    padding: 0;
+  }
+}
+
+.mapboxgl-ctrl {
+  display: none;
+}
+
+.main-header__menu.mat-menu-panel {
+  max-width: 25rem;
+  width: 100vw;
+  margin-top: 0.7rem;
+  box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.08),
+    0 0.3rem 2rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.2rem;
+  padding-bottom: 0;
+
+  .main-header__menu-user,
+  .mat-menu-item {
+    padding: 0 $offset-medium;
+  }
+
+  .mat-menu-item {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #131314;
+  }
+
+  &:not(.notifications) {
+    .mat-menu-item {
+      &:last-child {
+        border-top: 0.1rem solid $color-button-disable;
+      }
+    }
+  }
+
+  .mat-menu-item .mat-icon {
+    margin-right: 1rem;
+  }
+
+  .main-header__menu-user {
+    margin: 0;
+    font-weight: 500;
+    font-size: $font-size-normal;
+    line-height: 3rem;
+    color: $primary-color;
+    padding-bottom: 0.7rem;
+    border-bottom: 0.1rem solid $color-button-disable;
+  }
+
+  &.notifications {
+    display: flex;
+    max-width: 40rem;
+    max-height: 30rem;
+    .mat-menu-content:not(:empty) {
+      padding-top: 0;
+      padding-bottom: 0;
+      flex-grow: 1;
+    }
+
+    .mat-menu-item {
+      display: flex;
+      align-items: flex-start;
+      padding: $offset-medium;
+      height: auto;
+      background-color: $color-select-disable;
+      &.visited {
+        background-color: $color-white;
+      }
+      .notification {
+        &__icon {
+          margin-right: .8rem;
+          color: $color-tradewind;
+          &.alert {
+            color: $color-warning;
+          }
+        }
+        &__body {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            white-space: normal;
+          }
+          .content {
+            font-size: 1.2rem;
+            margin: $offset-xsmall 0 0;
+          }
+        }
+      }
+    }
+
+    .mat-menu-item + .mat-menu-item {
+      border-top: 0.1rem solid $color-button-disable;
+    }
+
+    .no-message {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      p {
+        font-size: 1.5rem;
+        color: $color-copy;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $laptop-min-width) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (min-device-width: $ipad-min-device-width) and (max-device-width: $ipad-max-device-width) and (orientation: portrait) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (min-width: $laptop-min-width) and (max-width: $large-laptop-min-width) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: $large-laptop-min-width) and (max-width: $large-screen-min-width) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: $large-screen-min-width) and (max-width: $wqhd-screen-min-width) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: $wqhd-screen-min-width) and (max-width: $wqhd-to-ultra-hd-screen-min-width) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: $wqhd-to-ultra-hd-screen-min-width) and (max-width: $ultra-hd-screen-min-width) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: $ultra-hd-screen-min-width) and (max-width: $screen-5k-min-width) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: $screen-5k-min-width) {
+  html {
+    font-size: 36px;
+  }
+}
+
+.advertisement-wrap {
+  &:hover &__btns {
+    display: block;
+  }
+
+  &.with-pointer:hover {
+    cursor: pointer;
+  }
+}
+
+.mat-dialog-container {
+  min-width: 28rem;
+}
+
+.ngx-spinner-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    position: relative !important;
+    transform: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-top: 2rem;
+  }
+}
+
+.account__sidebar-for_mobile-active {
+  @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+    left: 0;
+    & > span {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: 2.4rem;
+        background: inherit;
+        border-top: 2px solid $primary-color;
+        border-left: 2px solid $primary-color;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}

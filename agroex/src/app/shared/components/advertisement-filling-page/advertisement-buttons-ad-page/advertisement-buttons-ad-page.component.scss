@@ -1,0 +1,12 @@
+@import "../../../../styles/general-styles";
+
+:host {
+  @include advertisements-buttons;
+
+  button {
+    @media only screen and (max-width: $laptop-min-width) {
+      padding-top: $offset-medium;
+      padding-bottom: $offset-medium;
+    }
+  }
+}

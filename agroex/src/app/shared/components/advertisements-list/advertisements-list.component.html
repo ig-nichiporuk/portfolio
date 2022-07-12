@@ -1,0 +1,24 @@
+<div class="advertisement-list__wrap">
+  <div
+    class="advertisement-block"
+    *ngFor="let advertisement of this.advertisementsRequest?.advertisements"
+  >
+    <app-advertisement
+      [showOwnerFlag]="showOwnerFlag"
+      [user]="user"
+      [userRole]="userRole"
+      [isNavigationToAdvertisementPage]="isNavigationToAdvertisementPage"
+      [advertisement]="advertisement"
+      [moderationPage]="moderationPage"
+      (setBet)="onSetBet($event)"
+    >
+      <ng-container
+        buttons
+        *ngIf="actionButtonsTemplateRef && user"
+        [ngTemplateOutlet]="actionButtonsTemplateRef"
+        [ngTemplateOutletContext]="{ $implicit: advertisement }"
+      >
+      </ng-container>
+    </app-advertisement>
+  </div>
+</div>
