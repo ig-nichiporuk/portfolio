@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('../components/head-meta.html', {"title": "Main-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/main-page.css?v.22">
+	@@include('../components/head-scripts.html')
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<style>
+	.main-page {
+
+		background-image: url('img/webp/main-background-mob-1024.webp');
+	}
+
+	@media (min-width: 640px) {
+		.main-page {
+			background-image: url('img/webp/main-background-2k.webp');
+		}
+	}
+	@media (min-width: 1921px) {
+		.main-page {
+			background-image: url('img/webp/main-background-4k.webp');
+		}
+	}
+</style>
+<body>
+@@include('../components/header.html')
+<main class="main-page">
+	<div class="container">
+		<div class="main-page__content">
+			<div class="main-page__wrap">
+				<div class="main-page__title">
+					<h1 class="title text-medium">Coinstrail</h1>
+					<span class="desc__wrap">
+						<span class="desc">Нумизматический портал</span>
+					</span>
+				</div>
+				<div class="main-page__form">
+					<div class="fast-find">
+						<span class="fast-find__title text-medium">Поиск монеты</span>
+						<form action="" class="fast-find__form">
+							<div class="fast-find__form-item js-delete-first-step">
+								<span>Выберите страну</span>
+								<div class="select-style js-dropdown-wrap">
+									<div class="select-style__btn js-dropdown-btn">
+										<input type="text" placeholder="Все страны" readonly>
+									</div>
+									<ul class="select-style__body js-dropdown-body">
+										<li class="select-style__item">
+											<span class="select-style__option">Беларусь</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Италия</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Испания</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Россия</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Великобритания</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Италия</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Испания</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">Россия</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="fast-find__form-item js-delete-second-step disabled">
+								<span>
+									Год
+									<span class="line"></span>
+								</span>
+								<div class="select-style js-dropdown-wrap">
+									<div class="select-style__btn js-dropdown-btn">
+										<input type="tel" placeholder="Все года">
+									</div>
+									<ul class="select-style__body js-dropdown-body">
+										<li class="select-style__item">
+											<span class="select-style__option">1982</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">1983</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">1989</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">1991</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">1992</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">1990</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">1995</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2000</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2001</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2002</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2003</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2004</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2005</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<button class="fast-find__form-btn btn-style" disabled>Искать</button>
+						</form>
+					</div>
+				</div>
+				<div class="main-page__statistic">
+					<div class="statistic">
+						<ul class="statistic__list">
+							<li class="statistic__list-item">
+								<span class="left">Стран в каталоге</span>
+								<span class="right">15</span>
+							</li>
+							<li class="statistic__list-item">
+								<span class="left">Монет в каталоге</span>
+								<span class="right">63234354</span>
+							</li>
+							<li class="statistic__list-item">
+								<span class="left"> Аукционов отслеживается</span>
+								<span class="right">25834</span>
+							</li>
+
+							<li class="statistic__list-item">
+								<span class="left">Лотов отслеживается</span>
+								<span class="right">3096</span>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('../components/footer.html')
+
+</body>
+</html>
+
+
+<script>
+	$('.js-delete-first-step .select-style__item').on('click', function () {
+		$('.js-delete-second-step').removeClass('disabled');
+	});
+
+	$('.js-delete-second-step .select-style__item').on('click', function () {
+		$('.js-delete-second-step').next('.fast-find__form-btn').removeAttr('disabled');
+	});
+
+	$('.js-delete-second-step input').on('keyup', function () {
+		$('.js-delete-second-step .select-style__item').each(function () {
+			console.log(typeof (+($(this).children().text())));
+			$(this).filter(function () {
+				if(+($(this).children().text()).indexOf($('.js-delete-second-step input').val()) === -1) {
+					$(this).addClass('hidden');
+				}
+				else {
+					$(this).removeClass('hidden');
+				}
+			})
+
+		});
+	})
+</script>

@@ -1,0 +1,94 @@
+$main-color: #172345;
+$dark-color: #32325D;
+$gray-color: #C4C4C4;
+$gray-text: #A8A8A8;
+$green-color: #517D58;
+$active-color: #2B2B9F;
+
+$dropdown-bd-color: #F0F0F0;
+
+$bdrs-6: 6px;
+$bdrs-4: 4px;
+
+$trans-time: .2s;
+$delay-time: .2s;
+
+$height-hd:70px;
+$height-mob:60px;
+
+@mixin hover-shadow {
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.2), 0px 1.12694px 3.38082px rgba(0, 0, 0, 0.1);
+}
+
+@mixin tab-hover($tab-hover-line){
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 51%;
+        right: 51%;
+        height: 3px;
+        background-color: $tab-hover-line;
+        transition: all 0.2s ease-out;
+    }
+}
+
+@mixin tab-hover-active{
+    &:before {
+        left: 0;
+        right: 0;
+    }
+}
+
+@mixin card-style{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #FFF;
+    border-radius: $bdrs-6;
+    box-shadow: inset 0 0 0 1px #e1e1e1;
+   /* transform: perspective(1px) scale(1) translateZ(0);
+    transition: transform $trans-time linear;
+    will-change: transform;*/
+
+}
+@mixin card-hover{
+   /* box-shadow: inset 0 0 0 1px #e1e1e1,
+                0 3px 2px rgba(0,0,0,.04),
+                0 7px 5px rgba(0,0,0,.02),
+                0 13px 10px rgba(0,0,0,.02),
+                    0 22px 17px rgba(0,0,0,.02);
+    transition: transform $trans-time linear;
+    transform: perspective(1px) scale(1.015) translateZ(0);*/
+    box-shadow: inset 0 0 0 1px $active-color;
+}
+
+@mixin list-border{
+    box-shadow: inset 0 1px 0 0 #f0f0f0;
+}
+
+
+@mixin hover-bgc {
+    background-color: rgba(50, 50, 93, 0.15);
+}
+
+@mixin hover-link($bg-color) {
+    &:hover,
+    &.active,
+    &.open{
+        font-weight: bold;
+    }
+}
+
+
+@mixin transition {
+    transition: transform $trans-time linear;
+}
+@mixin svg-rotate {
+    transform: rotate(0);
+    @include transition;
+}
+@mixin svg-rotate-open {
+    transform: rotate(-180deg);
+    @include transition;
+}

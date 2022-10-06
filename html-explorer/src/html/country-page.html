@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Country-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/country-page.css?v.22">
+	@@include('../components/head-scripts.html')
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content country-page__container">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__panel">
+				<div class="content__panel-stamping">
+					@@include('../components/stamping.html')
+				</div>
+				<div class="content__panel-sidebar">
+					@@include('../components/sidebar.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Каталог лотов Польши</h1>
+					<p>Всего 25859 лотов в каталоге</p>
+				</div>
+				<div class="content__block-wrap">
+					<div class="country-page">
+						<div class="country-page__wrap">
+							<div class="country-page__item">
+								@@include('../components/country-card.html')
+							</div>
+							<div class="country-page__item">
+								@@include('../components/country-card-no-img.html')
+							</div>
+							<div class="country-page__item">
+								@@include('../components/country-card.html')
+							</div>
+							<div class="country-page__item">
+								@@include('../components/country-card.html')
+							</div>
+							<div class="country-page__item">
+								@@include('../components/country-card.html')
+							</div>
+							<div class="country-page__item">
+								@@include('../components/country-card.html')
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+	</div>
+</main>
+@@include('../components/footer.html')
+@@include('../components/toolbar.html')
+</body>
+</html>

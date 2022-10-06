@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Main-page</title>
+    <link href="fonts/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global-style.css?v.22">
+    <link rel="stylesheet" href="css/main-page.css?v.22">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/scroll-lock.min.js"></script>
+    <script src="js/global_svg_localstorage.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
+</head>
+<style>
+    .main-page {
+        background-image: url('img/webp/main-background-mob-1024.webp');
+    }
+
+    @media (min-width: 640px) {
+        .main-page {
+            background-image: url('img/webp/main-background-2k.webp');
+        }
+    }
+
+    @media (min-width: 1921px) {
+        .main-page {
+            background-image: url('img/webp/main-background-4k.webp');
+        }
+    }
+</style>
+
+<body>
+    <div class="overlay js-overlay"></div>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <a href="#" class="header__logo">
+                        <svg>
+                            <use xlink:href="#logo"></use>
+                        </svg>
+                    </a>
+                    <div class="header__menu js-catalog-menu">
+                        <a href="./catalog-page.html" class="js-catalog-menu-btn">
+                            <span class="menu-desctop">Каталог</span>
+                            <span class="menu-mob">
+                                <span class="btn-wrap">
+                                    <span class="top"></span>
+                                    <span class="middle"></span>
+                                    <span class="bottom"></span>
+                                </span>
+                            </span>
+                        </a>
+                        <nav class="header__catalog container js-catalog">
+                            <div class="header__catalog-wrap js-catalog-wrap">
+                                <div class="header__catalog-continents js-continents-wrap">
+                                    <div class="container">
+                                        <div class="header__catalog-main" data-scroll-lock-scrollable>
+                                            <span class="header__catalog-title mob-title text-medium">Меню</span>
+                                            <a href="#" class="mob-link">Континенты</a>
+                                            <a href="#" class="mob-link">Поддержка</a>
+                                            <span class="header__catalog-title text-medium">Разделы каталога</span>
+                                            <ul class="header__catalog-list">
+                                                <li><span class="js-continent-btn sublist <!--active-->">Европа</span></li>
+                                                <li><span class="js-continent-btn sublist">Азия</span></li>
+                                                <li><span class="js-continent-btn sublist">Австралия и Океания</span></li>
+                                                <li><span class="js-continent-btn sublist">Африка</span></li>
+                                                <li><span class="js-continent-btn sublist">Северная Америка</span></li>
+                                                <li><span class="js-continent-btn sublist">Южная Америка</span></li>
+                                            </ul>
+                                            <div class="header__catalog-currency">
+                                                <div class="header__catalog-select">
+                                                    <label>Валюта:</label>
+                                                    <div class="header__catalog-select_wrap">
+                                                        <span class="js-select-mob-val">Доллар США</span>
+                                                        <select name="currency" class="js-select-mob-menu">
+                                                            <option>Доллар США</option>
+                                                            <option>Евро</option>
+                                                            <option>Британский фунт</option>
+                                                            <option>Швейцарский франк</option>
+                                                            <option>Польский злотый</option>
+                                                            <option>Российский рубль</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="header__catalog-lang">
+                                                <div class="header__catalog-select">
+                                                    <label>Язык:</label>
+                                                    <div class="header__catalog-select_wrap">
+                                                        <span class="js-select-mob-val">English</span>
+                                                        <select name="lang" class="js-select-mob-menu">
+                                                            <option>English</option>
+                                                            <option>Русский</option>
+                                                            <option>EnglishEnglishhh</option>
+                                                            <option>PL</option>
+                                                            <option>UA</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__catalog-countries js-countries-wrap">
+                                    <div class="header__catalog-content open js-countries-list">
+                                        <div class="container">
+                                            <span class="header__catalog-title text-medium">Страны</span>
+                                            <span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
+                                            <div class="header__catalog-links" data-scroll-lock-scrollable>
+                                                <ul class="header__catalog-list">
+                                                    <li><a href="#">Беларусь</a></li>
+                                                    <li><a href="#">Франция</a></li>
+                                                    <li><a href="#">Италия</a></li>
+                                                    <li><a href="#">Великобритания</a></li>
+                                                    <li><a href="#">Эстония</a></li>
+                                                    <li><a href="#">Австрия</a></li>
+                                                    <li><span class="sublist js-country-btn">Германия после 1871</span></li>
+                                                    <li><a href="#">Германия</a></li>
+                                                    <li><a href="#">Ирландия</a></li>
+                                                    <li><a href="#">Польша</a></li>
+                                                    <li><a href="#">Нидерланды</a></li>
+                                                    <li><a href="#">Швейцария</a></li>
+                                                    <li><a href="#">Россия</a></li>
+                                                    <li><a href="#">Финляндия</a></li>
+                                                    <li><a href="#">Швеция</a></li>
+                                                    <li><a href="#">Беларусь</a></li>
+                                                    <li><a href="#">Франция</a></li>
+                                                    <li><a href="#">Италия</a></li>
+                                                    <li><a href="#">Великобритания</a></li>
+                                                    <li><a href="#">Эстония</a></li>
+                                                    <li><a href="#">Австрия</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="header__catalog-subcontent js-countries-sublist">
+                                        <div class="container">
+                                            <span class="header__catalog-title js-catalog-back">Германия до 1871</span>
+                                            <div class="header__catalog-links" data-scroll-lock-scrollable>
+                                                <ul class="header__catalog-list">
+                                                    <li><a href="#">Финляндия</a></li>
+                                                    <li><a href="#">Италия</a></li>
+                                                    <li><a href="#">Австрия</a></li>
+                                                    <li><a href="#">Ирландия</a></li>
+                                                    <li><a href="#">Швейцария</a></li>
+                                                    <li><a href="#">Швеция</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <a href="#" class="header__link">Поддержка</a>
+                    <!--mobile finder block-->
+                    <div class="header__finder mob">
+                        <div class="header__finder-animate js-finder-animate-block">
+                            <div class="container">
+                                <div class="header__finder-wrap js-finder-wrap">
+                                    <svg class="find-icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                    <input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+                                    <svg class="close-icon js-finder-animate-close">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                                <div class="finder__body js-finder-body" data-scroll-lock-scrollable>
+                                    <ul class="finder__body-list">
+                                        <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
+                                        <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
+                                        <li><a href="#">1835-1872 Золотая монета <span class="country">(Германия)</span></a></li>
+                                        <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
+                                        <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
+                                    </ul>
+                                    <a href="#" class="finder__more-settings ">Расширенный поиск</a>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="finder__btn-icon js-finder-open-input">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <!--mobile finder block end-->
+                    <div class="header__finder">
+                        <div class="finder__wrap js-finder-wrap">
+                            <div class="finder__input">
+                                <input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+                                <!--<a href="#" class="finder__sort">
+			<svg class="finder__sort-icon">
+				<use xlink:href="#settings"></use>
+			</svg>
+		</a>-->
+                                <span class="finder__cleaner js-finder-clean">
+                                    <svg class="finder__cleaner-icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <a href="#" class="finder__btn">
+                                <svg class="finder__btn-icon">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="finder__body js-finder-body" data-scroll-lock-scrollable>
+                            <ul class="finder__body-list">
+                                <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
+                                <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
+                                <li><a href="#">1835-1872 Золотая монета <span class="country">(Германия)</span></a></li>
+                                <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
+                                <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
+                            </ul>
+                            <a href="#" class="finder__more-settings ">Расширенный поиск</a>
+                        </div>
+                    </div>
+                    <div class="header__currency dropdown js-dropdown-wrap">
+                        <span class="header__currency-btn dropdown__btn js-dropdown-btn"> USD <svg class="arrow">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </span>
+                        <ul class="header__currency-list dropdown__body js-dropdown-body">
+                            <li><a href="#">USD <span>(Доллар США)</span></a></li>
+                            <li><a href="#">EUR <span>(Евро)</span></a></li>
+                            <li><a href="#">GBP <span>(Британский фунт)</span></a></li>
+                            <li><a href="#">CHF <span>(Швейцарский франк)</span></a></li>
+                            <li><a href="#">PLN <span>(Польский злотый)</span></a></li>
+                            <li><a href="#">RUB <span>(Российский рубль)</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="header__lang dropdown js-dropdown-wrap">
+                        <span class="header__lang-btn dropdown__btn js-dropdown-btn">
+                            <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> ENG <svg class="arrow">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </span>
+                        <ul class="header__lang-list dropdown__body js-dropdown-body">
+                            <li>
+                                <a href="#">
+                                    <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> English </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> Русский </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> EnglishEnglishhh </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-page">
+        <div class="container">
+            <div class="main-page__content">
+                <div class="main-page__wrap">
+                    <div class="main-page__title">
+                        <h1 class="title text-medium">Coinstrail</h1>
+                        <span class="desc__wrap">
+                            <span class="desc">Нумизматический портал</span>
+                        </span>
+                    </div>
+                    <div class="main-page__form">
+                        <div class="fast-find">
+                            <span class="fast-find__title text-medium">Поиск монеты</span>
+                            <form action="" class="fast-find__form">
+                                <div class="fast-find__form-item js-delete-first-step">
+                                    <span>Выберите страну</span>
+                                    <div class="select-style js-dropdown-wrap">
+                                        <div class="select-style__btn js-dropdown-btn">
+                                            <input type="text" placeholder="Все страны" readonly>
+                                        </div>
+                                        <ul class="select-style__body js-dropdown-body">
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Беларусь</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Италия</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Испания</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Россия</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Великобритания</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Италия</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Испания</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">Россия</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fast-find__form-item js-delete-second-step disabled">
+                                    <span> Год <span class="line"></span>
+                                    </span>
+                                    <div class="select-style js-dropdown-wrap">
+                                        <div class="select-style__btn js-dropdown-btn">
+                                            <input type="tel" placeholder="Все года">
+                                        </div>
+                                        <ul class="select-style__body js-dropdown-body">
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1982</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1983</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1989</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1991</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1992</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1990</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">1995</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">2000</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">2001</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">2002</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">2003</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">2004</span>
+                                            </li>
+                                            <li class="select-style__item">
+                                                <span class="select-style__option">2005</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="fast-find__form-btn btn-style" disabled>Искать</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="main-page__statistic">
+                        <div class="statistic">
+                            <ul class="statistic__list">
+                                <li class="statistic__list-item">
+                                    <span class="left">Стран в каталоге</span>
+                                    <span class="right">15</span>
+                                </li>
+                                <li class="statistic__list-item">
+                                    <span class="left">Монет в каталоге</span>
+                                    <span class="right">63234354</span>
+                                </li>
+                                <li class="statistic__list-item">
+                                    <span class="left"> Аукционов отслеживается</span>
+                                    <span class="right">25834</span>
+                                </li>
+                                <li class="statistic__list-item">
+                                    <span class="left">Лотов отслеживается</span>
+                                    <span class="right">3096</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__logo">
+                    <a href="#" class="footer__logo-link">
+                        <svg>
+                            <use xlink:href="#logo"></use>
+                        </svg>
+                    </a>
+                    <p class="footer__logo-text"><span>© 2021 «Coinstrail».</span> <span>Все права защищены.</span></p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__nav-item">
+                        <span class="footer__nav-title">Каталоги монет</span>
+                        <ul class="footer__nav-links">
+                            <li><a href="#" class="footer__nav-link">Европа</a></li>
+                            <li><a href="#" class="footer__nav-link">Северная Америка</a></li>
+                            <li><a href="#" class="footer__nav-link">Южная Америка</a></li>
+                            <li><a href="#" class="footer__nav-link">Азия</a></li>
+                            <li><a href="#" class="footer__nav-link">Африка</a></li>
+                            <li><a href="#" class="footer__nav-link">Австралия и Океания</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <span class="footer__nav-title">Языки</span>
+                        <ul class="footer__nav-links">
+                            <li><a href="#" class="footer__nav-link">Английский</a></li>
+                            <li><a href="#" class="footer__nav-link">Португальский</a></li>
+                            <li><a href="#" class="footer__nav-link">Русский</a></li>
+                            <li><a href="#" class="footer__nav-link">Китайский</a></li>
+                            <li><a href="#" class="footer__nav-link">Французский</a></li>
+                            <li><a href="#" class="footer__nav-link">Немецкий</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <span class="footer__nav-title">Поддержка</span>
+                        <ul class="footer__nav-links">
+                            <li><a href="#" class="footer__nav-link">Служба поддержки</a></li>
+                            <li><a href="#" class="footer__nav-link">Cookies</a></li>
+                            <li class="social">
+                                <a href="#">
+                                    <img src="img/instagram.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="img/facebook.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#feedback" class="btn-style js-open-modal">Связаться с нами</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <div class="cookies js-cookies">
+        <div class="container">
+            <div class="cookies__wrap">
+                <p>Продолжая использовать наш сайт, вы даете согласие на обработку <span class="text-medium">файлов cookie</span> и пользовательских данных.</p>
+                <span class="btn-style btn-gray js-cookies-close">Согласен(-на)</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal__container js-modal-container">
+        <div class="modal js-modal" id="feedback">
+            <span class="modal__close js-close-modal"></span>
+            <div class="modal__body">
+                <span class="feedback__title text-medium">Как мы можем помочь?</span>
+                <form class="feedback">
+                    <div class="feedback__item">
+                        <label>Email <span class="red-star">*</span></label>
+                        <input type="email" placeholder="Электронный адрес">
+                        <div class="error-message hidden">
+                            <p>dgfdgh@gm имеет неправильный формат</p>
+                        </div>
+                    </div>
+                    <div class="feedback__item">
+                        <label>Имя</label>
+                        <input type="text" placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="feedback__item">
+                        <label>Напишите ваш вопрос <span class="red-star">*</span></label>
+                        <textarea class="input-style service-date__input error" placeholder="Введите текст вопроса в это поле"></textarea>
+                        <div class="message-info error">
+                            <p>Сообщение: обязательно к заполнению</p>
+                        </div>
+                    </div>
+                    <div class="feedback__item add-file">
+                        <label>Прикрепить файл</label>
+                        <label class="feedback__load-wrap">
+                            <input name="file" type="file" name="file" class="js-feedback-add-file">
+                            <span class="feedback__load-btn">Выбрать файл</span>
+                            <span class="feedback__load-file js-feadback-loaded-file"></span>
+                        </label>
+                    </div>
+                    <button class="feedback__btn btn-style">Отправить вопрос</button>
+                    <div class="message-info done">
+                        <p>Собщение отправлено</p>
+                    </div>
+                    <p class="feedback__footnote"> Нажимая кнопку «Отправить» я даю свое согласие <span>на обработку персональных данных</span>
+                    </p>
+                </form>
+                <script>
+                    $('.js-feedback-add-file').each(function() {
+                        $(this).on('change', function(e) {
+                            $(this).parent().find('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $('.js-delete-first-step .select-style__item').on('click', function() {
+        $('.js-delete-second-step').removeClass('disabled');
+    });
+    $('.js-delete-second-step .select-style__item').on('click', function() {
+        $('.js-delete-second-step').next('.fast-find__form-btn').removeAttr('disabled');
+    });
+    $('.js-delete-second-step input').on('keyup', function() {
+        $('.js-delete-second-step .select-style__item').each(function() {
+            console.log(typeof(+($(this).children().text())));
+            $(this).filter(function() {
+                if (+($(this).children().text()).indexOf($('.js-delete-second-step input').val()) === -1) {
+                    $(this).addClass('hidden');
+                } else {
+                    $(this).removeClass('hidden');
+                }
+            })
+        });
+    })
+</script>

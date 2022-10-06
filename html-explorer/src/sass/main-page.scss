@@ -1,0 +1,351 @@
+@import "variables";
+.fast-find,
+.statistic,
+.main-page__title{
+    width: 500px;
+}
+.fast-find,
+.statistic {
+    background: #fff;
+    box-shadow: inset 0 0 0 6px #EDEDED,
+                0 22px 31px rgba(0, 0, 0, 0.07),
+                0 3px 4px rgba(0, 0, 0, 0.035);
+    border-radius: $bdrs-6;
+}
+.fast-find{
+    padding: 45px 45px 50px;
+    &__title {
+        display: block;
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: -0.5px;
+        color: $dark-color;
+        margin: 0 0 30px 0;
+    }
+    &__form {
+        &-item {
+            & > span {
+                display: block;
+                position: relative;
+                margin-bottom: 10px;
+                font-size: 18px;
+                line-height: 25px;
+                font-weight: 500;
+                letter-spacing: 0.2px;
+                color: $dark-color;
+                &:before {
+                    content: '1';
+                    position: absolute;
+                    top: 50%;
+                    left: -50px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    transform: translate3d(0, -50%, 0);
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: 0.2px;
+                    color: #FFFFFF;
+                    background-color: $main-color;
+                }
+            }
+            &.disabled > span:before {
+                background-color: #D4D3D3;
+            }
+            & > span,
+            & > .select-style {
+                margin-left: 50px;
+            }
+            &.disabled {
+                pointer-events: none;
+            }
+        }
+        &-item + &-item {
+            & > span {
+                &:before {
+                    content: '2';
+                }
+            }
+            .line {
+                position: absolute;
+                width: 2px;
+                height: 60px;
+                background-color: #EDEDED;
+                top: -72px;
+                left: -36px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    top: 0;
+                    left: 0;
+                    background-color: $main-color;
+                    transform: scaleY(1);
+                    transform-origin: 0 0;
+                    transition: transform $trans-time linear;
+                }
+            }
+        }
+        &-item + &-item.disabled > span .line:before{
+            transform: scaleY(0);
+
+        }
+        &-item + &-item,
+        &-btn {
+            margin: 30px 0 0 0;
+        }
+        &-btn {
+            width: 100%;
+        }
+    }
+}
+.statistic {
+    padding: 30px;
+    &__list {
+        font-size: 15px;
+        line-height: 20px;
+        color: $main-color;
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            box-shadow: inset 0 -1px 0 0 #EDEDED;
+            .right {
+                font-weight: 500;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}
+.main-page {
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__content {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        padding: 160px 0 0;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-areas:
+                "title form"
+                "statistic form";
+        align-items: start;
+
+    }
+    &__title {
+        grid-area: title;
+        text-align: right;
+        & > * {
+            display: block;
+            color: #FFE5B1;
+
+        }
+        .title {
+            font-size: 112px;
+            line-height: 136px;
+            letter-spacing: -2px;
+        }
+        .desc {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: -0.2px;
+            position: relative;
+            padding: 0 0 0 15px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                width: 100vw;
+                height: 1px;
+                background-color: #FFE5B1;
+            }
+            &__wrap {
+                overflow: hidden;
+            }
+        }
+    }
+    &__form {
+        grid-area: form;
+        justify-self: end;
+    }
+    &__statistic {
+        grid-area: statistic;
+        align-self: end;
+    }
+}
+
+@media (max-width: 1539px) {
+    .main-page {
+        &__content {
+            padding: 140px 0 0;
+        }
+    }
+}
+
+@media (max-width: 1299px) {
+    .main-page {
+        &__content {
+            height: 900px;
+            padding: 120px 0 0;
+        }
+        &__title {
+            width: 404px;
+            .title {
+                font-size: 91px;
+                line-height: 110px;
+            }
+        }
+    }
+    .fast-find {
+        width: 420px;
+    }
+    .statistic {
+        padding: 30px 24px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 959px) {
+    .main-page {
+        background-position: 23% 100%;
+        &__content {
+            height: 1200px;
+            padding: 60px 0 0;
+        }
+        &__wrap {
+            grid-template-areas:
+                "title"
+                "form"
+                "statistic";
+            justify-content: center;
+        }
+        &__title {
+            justify-self: center;
+        }
+        &__form {
+            margin: 40px 0 0;
+        }
+        &__statistic {
+            margin: 30px 0 0 0;
+        }
+    }
+    .fast-find,
+    .statistic {
+        width: 500px;
+    }
+    .statistic {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 779px) {
+    .main-page {
+        &__title {
+            width: 297px;
+            .title {
+                font-size: 68px;
+                line-height: 82px;
+            }
+            .desc {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+    .fast-find,
+    .statistic {
+        width: 500px;
+    }
+    .statistic {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 639px) {
+    .main-page {
+        background-position: 50% 100%;
+        &__wrap {
+            justify-content: stretch;
+        }
+        &__form,
+        &__statistic {
+            width: 100%;
+        }
+
+    }
+    .fast-find,
+    .statistic {
+        width: 100%;
+    }
+    .fast-find {
+        padding: 40px 30px 45px;
+        &__title {
+            font-size: 26px;
+            line-height: 36px;
+            margin: 0 0 25px 0;
+        }
+        &__form {
+            &-item {
+                & > span {
+                    &:before {
+                        left: -40px;
+                    }
+                }
+                & > span,
+                & > .select-style {
+                    margin-left: 40px;
+                }
+            }
+            &-item + &-item {
+                & > span {
+                    &:before {
+                        content: '2';
+                    }
+                    .line {
+                        left: -26px;
+                    }
+                }
+            }
+            &-btn {
+                margin: 25px 0 0;
+            }
+        }
+    }
+    .statistic {
+        padding: 30px 20px;
+    }
+
+}
+
+@media (max-width: 359px) {
+    .main-page {
+        &__title {
+            width: 280px;
+            .title {
+                font-size: 64px;
+                line-height: 78px;
+            }
+        }
+    }
+    .fast-find {
+        &__title {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+    .fast-find,
+    .statistic {
+        padding: 20px;
+    }
+    .statistic__list {
+        font-size: 13px;
+    }
+}

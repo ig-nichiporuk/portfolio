@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Catalog-page"})
+	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
+	<link rel="stylesheet" href="css/catalog-page.css?v.22">
+	@@include('../components/head-scripts.html')
+	<script src="js/continents_svg_localstorage.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content catalog-page__container">
+	<div class="container">
+		<div class="content__wrap without-panel">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Каталог монет</h1>
+				</div>
+				<div class="content__block-wrap">
+					<div class="catalog-page">
+						<div class="catalog-page__header">
+							<span>Выберите континент:</span>
+							<div class="catalog-page__tabs">
+								<span class="catalog-page__tab active js-catalog-info-tab">Европа</span>
+								<span class="catalog-page__tab js-catalog-info-tab">Азия</span>
+								<span class="catalog-page__tab js-catalog-info-tab">Австралия и Океания</span>
+								<span class="catalog-page__tab js-catalog-info-tab">Африка</span>
+								<span class="catalog-page__tab js-catalog-info-tab">Северная Америка</span>
+								<span class="catalog-page__tab js-catalog-info-tab">Южная Америка</span>
+							</div>
+						</div>
+						<div class="catalog-page__content">
+							<div class="catalog-page__map">
+								<svg class="catalog-page__map-icon">
+									<use xlink:href="#europe"></use>
+								</svg>
+								<div class="catalog-page__map-desc">
+									<span class="title">Европа</span>
+									<span class="desc">Всего монет в каталоге: 54480</span>
+									<span class="desc">Добавлено: 54</span>
+								</div>
+							</div>
+							<div class="catalog-page__body">
+								<div class="catalog-page__list js-list">
+									<span class="catalog-page__list-title">Страны Европы</span>
+									<ul class="catalog-page__list-wrap js-main-list">
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Великобритания</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Германия</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<span href="#" class="catalog-page__list-link js-show-list">
+												<span class="circle">
+													<span class="circle__wrap">
+														<svg>
+													    <use xlink:href="#list"></use>
+													</svg>
+													</span>
+												</span>
+												<p class="caption">
+													<span class="title">
+														Германия до 1871
+														<svg>
+														    <use xlink:href="#arrow-down"></use>
+														</svg>
+													</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</span>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Беларусь</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Швейцария</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Польша</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Великобритания</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Германия</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Германия до 1871</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Беларусь</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Швейцария</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Польша</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Великобритания</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Германия</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Германия до 1871</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Беларусь</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Швейцария</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Польша</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+									</ul>
+									<span class="catalog-page__list-btn js-list-more">Показать все</span>
+								</div>
+								<div class="catalog-page__list sublist js-list">
+									<span class="catalog-page__list-title js-show-mainlist">
+										<svg>
+										    <use xlink:href="#arrow-down"></use>
+										</svg>
+										Германия до 1871
+									</span>
+									<ul class="catalog-page__list-wrap">
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Пруссия</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Саксония</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Бавария</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Вюртемберг</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+										<li class="catalog-page__list-item">
+											<a href="#" class="catalog-page__list-link">
+												<img src="img/webp/flag.webp" alt="flag">
+												<p class="caption">
+													<span class="title">Ганновер</span>
+													<span class="desc">5404 монет</span>
+												</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+	</div>
+</main>
+@@include('../components/footer.html')
+<script>
+	$('.js-catalog-info-tab').on('click', function () {
+		if(!$(this).hasClass('active')){
+			$('.js-catalog-info-tab').removeClass('active');
+			$(this).addClass('active');
+		}
+	});
+	$('.js-show-list').on('click',function () {
+		$('.js-list').addClass('open');
+	});
+	$('.js-show-mainlist').on('click', function () {
+		$('.js-list').removeClass('open');
+	});
+	$('.js-list-more').on('click',function () {
+		$(this).addClass('hidden');
+		$(this).prev('.js-main-list').children().css({'display' : 'block'});
+	});
+</script>
+</body>
+</html>
