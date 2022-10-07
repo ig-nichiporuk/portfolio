@@ -1,43 +1,575 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	@@include('../components/head-meta.html', {"title": "Coinstrail"})
-	<link href="fonts/stylesheet.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/slick-slider/slick.css">
+	<link rel="stylesheet" href="css/slick-slider/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/global_svg_localstorage.js"></script>
+	<script src="js/jquery.touchSwipe/jquery.touchSwipe.min.js"></script>
+	<script src="js/slick-slider/slick-slider.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
-<style>
-	body{
-		margin: 0;
-		padding: 0;
-		font-family: 'Inter', sans-serif;
-		-ms-text-size-adjust: 100%;
-		-moz-text-size-adjust: 100%;
-		-webkit-text-size-adjust: 100%;
-		-o-text-size-adjust: 100%;
-		min-width: 320px;
-		color: #172345;
-		background: #F0F0F0;
-	}
-	a {
-		text-decoration: none;
-	}
-</style>
 <body>
-<div class="container" style="display: flex; height: 100vh;">
-	<div class="wrapper" style="display: flex; flex-direction: column; align-items: center; margin: auto;">
-		<a href="main-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Main</a>
-		<a href="country-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Country page</a>
-		<a href="year-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Year page</a>
-		<a href="lot-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Lot page</a>
-		<a href="support-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Support</a>
-		<a href="coin-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Coin page</a>
-		<a href="catalog-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Catalog page</a>
-		<a href="period-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Period page</a>
-		<a href="type-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Type page</a>
-		<a href="filter-page.html" style="font-size: 20px; line-height: 45px; color: #172345;">Filter page</a>
-		<a href="filter-page-done.html" style="font-size: 20px; line-height: 45px; color: #172345;">Filter page (result)</a>
+
+<h1>Slider Offers</h1>
+<div class="exp-offers">
+	<div class="exp-offers__slider js-slider-offers">
+			<div class="exp-offers__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<span class="offer-label">Empfehlung</span>
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+					<div class="slider-card__price">
+						<a href="#">
+							<svg>
+								<use xlink:href="#leaf"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#map"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#send"></use>
+							</svg>
+						</a>
+						<span class="slider-card__total">ab € 2.343,-</span>
+					</div>
+					<a href="" class="slider-card__link-btn exp-btn exp-btn_primary">Jetzt Anfragen</a>
+				</div>
+			</div>
+			<div class="exp-offers__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<span class="offer-label">Empfehlung</span>
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+					<div class="slider-card__price">
+						<a href="#">
+							<svg>
+								<use xlink:href="#leaf"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#map"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#send"></use>
+							</svg>
+						</a>
+						<span class="slider-card__total">ab € 2.343,-</span>
+					</div>
+					<a href="" class="slider-card__link-btn exp-btn exp-btn_primary">Jetzt Anfragen</a>
+				</div>
+			</div>
+			<div class="exp-offers__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<span class="offer-label">Empfehlung</span>
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+					<div class="slider-card__price">
+						<a href="#">
+							<svg>
+								<use xlink:href="#leaf"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#map"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#send"></use>
+							</svg>
+						</a>
+						<span class="slider-card__total">ab € 2.343,-</span>
+					</div>
+					<a href="" class="slider-card__link-btn exp-btn exp-btn_primary">Jetzt Anfragen</a>
+				</div>
+			</div>
+			<div class="exp-offers__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<span class="offer-label">Empfehlung</span>
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+					<div class="slider-card__price">
+						<a href="#">
+							<svg>
+								<use xlink:href="#leaf"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#map"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#send"></use>
+							</svg>
+						</a>
+						<span class="slider-card__total">ab € 2.343,-</span>
+					</div>
+					<a href="" class="slider-card__link-btn exp-btn exp-btn_primary">Jetzt Anfragen</a>
+				</div>
+			</div>
+			<div class="exp-offers__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<span class="offer-label">Empfehlung</span>
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+					<div class="slider-card__price">
+						<a href="#">
+							<svg>
+								<use xlink:href="#leaf"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#map"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="#send"></use>
+							</svg>
+						</a>
+						<span class="slider-card__total">ab € 2.343,-</span>
+					</div>
+					<a href="" class="slider-card__link-btn exp-btn exp-btn_primary">Jetzt Anfragen</a>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="block">
+	<h1>Slider Experts</h1>
+	<div class="exp-experts">
+		<div class="exp-experts__slider js-slider-experts">
+			<div class="exp-experts__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+				</div>
+			</div>
+			<div class="exp-experts__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+				</div>
+			</div>
+			<div class="exp-experts__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+				</div>
+			</div>
+			<div class="exp-experts__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+				</div>
+			</div>
+			<div class="exp-experts__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+				</div>
+			</div>
+			<div class="exp-experts__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">Inseltraum Malediven</span>
+					<p class="slider-card__desc">
+						10 Tage Reise inkl. Flug ab Frankfurt, 7 Übernachtungen inkl. Frühstück in der Deluxe Villa
+						im Reethi Beach Resort**** & Transfers (Flug & Boot)
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
+<div class="block">
+	<h1>Slider Experts on the road</h1>
+	<div class="exp-expert-on-roads">
+		<div class="exp-expert-on-roads__slider js-slider-expert-on-roads">
+			<div class="exp-expert-on-roads__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">
+						Südamerika Reisebericht: Meine Highlights
+					</span>
+					<p class="slider-card__desc">
+						Unsere Reiseexperten sind weltweit unterwegs, um für Sie einzigartige Reiseerlebnisse zu
+						entdecken. Die Reiseerfahrungen unserer Experten ermöglichen eine umfassende Beratung für Ihre
+						Traumreise.
+					</p>
+					<div class="slider-card__user">
+						<img src="img/offer-img.jpeg" alt="" class="slider-card__user-photo">
+						<div class="slider-card__user-info">
+							<span class="slider-card__user-name">Samuel Jackson</span>
+							<span class="slider-card__user-date">15. Februar 2017</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="exp-expert-on-roads__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">
+						Südamerika Reisebericht: Meine Highlights
+					</span>
+					<p class="slider-card__desc">
+						Unsere Reiseexperten sind weltweit unterwegs, um für Sie einzigartige Reiseerlebnisse zu
+						entdecken. Die Reiseerfahrungen unserer Experten ermöglichen eine umfassende Beratung für Ihre
+						Traumreise.
+					</p>
+					<div class="slider-card__user">
+						<img src="img/offer-img.jpeg" alt="" class="slider-card__user-photo">
+						<div class="slider-card__user-info">
+							<span class="slider-card__user-name">Samuel Jackson</span>
+							<span class="slider-card__user-date">15. Februar 2017</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="exp-expert-on-roads__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">
+						Südamerika Reisebericht: Meine Highlights
+					</span>
+					<p class="slider-card__desc">
+						Unsere Reiseexperten sind weltweit unterwegs, um für Sie einzigartige Reiseerlebnisse zu
+						entdecken. Die Reiseerfahrungen unserer Experten ermöglichen eine umfassende Beratung für Ihre
+						Traumreise.
+					</p>
+					<div class="slider-card__user">
+						<img src="img/offer-img.jpeg" alt="" class="slider-card__user-photo">
+						<div class="slider-card__user-info">
+							<span class="slider-card__user-name">Samuel Jackson</span>
+							<span class="slider-card__user-date">15. Februar 2017</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="exp-expert-on-roads__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">
+						Südamerika Reisebericht: Meine Highlights
+					</span>
+					<p class="slider-card__desc">
+						Unsere Reiseexperten sind weltweit unterwegs, um für Sie einzigartige Reiseerlebnisse zu
+						entdecken. Die Reiseerfahrungen unserer Experten ermöglichen eine umfassende Beratung für Ihre
+						Traumreise.
+					</p>
+					<div class="slider-card__user">
+						<img src="img/offer-img.jpeg" alt="" class="slider-card__user-photo">
+						<div class="slider-card__user-info">
+							<span class="slider-card__user-name">Samuel Jackson</span>
+							<span class="slider-card__user-date">15. Februar 2017</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="exp-expert-on-roads__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">
+						Südamerika Reisebericht: Meine Highlights
+					</span>
+					<p class="slider-card__desc">
+						Unsere Reiseexperten sind weltweit unterwegs, um für Sie einzigartige Reiseerlebnisse zu
+						entdecken. Die Reiseerfahrungen unserer Experten ermöglichen eine umfassende Beratung für Ihre
+						Traumreise.
+					</p>
+					<div class="slider-card__user">
+						<img src="img/offer-img.jpeg" alt="" class="slider-card__user-photo">
+						<div class="slider-card__user-info">
+							<span class="slider-card__user-name">Samuel Jackson</span>
+							<span class="slider-card__user-date">15. Februar 2017</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="exp-expert-on-roads__item">
+				<div class="slider-card">
+					<div class="slider-card__img">
+						<img src="img/offer-img.jpeg" alt="">
+					</div>
+					<span class="slider-card__title">
+						Südamerika Reisebericht: Meine Highlights
+					</span>
+					<p class="slider-card__desc">
+						Unsere Reiseexperten sind weltweit unterwegs, um für Sie einzigartige Reiseerlebnisse zu
+						entdecken. Die Reiseerfahrungen unserer Experten ermöglichen eine umfassende Beratung für Ihre
+						Traumreise.
+					</p>
+					<div class="slider-card__user">
+						<img src="img/offer-img.jpeg" alt="" class="slider-card__user-photo">
+						<div class="slider-card__user-info">
+							<span class="slider-card__user-name">Samuel Jackson</span>
+							<span class="slider-card__user-date">15. Februar 2017</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="block">
+	<h1>Slider Banners</h1>
+	<div class="exp-banner">
+		<div class="exp-banner__slider js-slider-banners">
+			<div class="exp-banner__slider-item">
+				<div class="exp-banner__slider-content">
+					<span class="offer-label">Empfehlung</span>
+					<img src="img/banner.jpeg" alt="">
+				</div>
+			</div>
+			<div class="exp-banner__slider-item">
+				<div class="exp-banner__slider-content">
+					<span class="offer-label">Empfehlung</span>
+					<img src="img/banner.jpeg" alt="">
+				</div>
+			</div>
+			<div class="exp-banner__slider-item">
+				<div class="exp-banner__slider-content">
+					<span class="offer-label">Empfehlung</span>
+					<img src="img/banner.jpeg" alt="">
+				</div>
+			</div>
+			<div class="exp-banner__slider-item">
+				<div class="exp-banner__slider-content">
+					<span class="offer-label">Empfehlung</span>
+					<img src="img/banner.jpeg" alt="">
+				</div>
+			</div>
+			<div class="exp-banner__slider-item">
+				<div class="exp-banner__slider-content">
+					<span class="offer-label">Empfehlung</span>
+					<img src="img/banner.jpeg" alt="">
+				</div>
+			</div>
+			<div class="exp-banner__slider-item">
+				<div class="exp-banner__slider-content">
+					<span class="offer-label">Empfehlung</span>
+					<img src="img/banner.jpeg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="block">
+	<h1>Headers</h1>
+	<span class="exp-header-with-line">
+		Der Weg zu Ihrer individuellen Traumreise
+	</span>
+</div>
+
+<div class="block">
+	<h1>Links with arror</h1>
+	<a href="" class="exp-link">
+		<span>Alle Reiseberichte</span>
+		<svg>
+			<use xlink:href="#arrow"></use>
+		</svg>
+	</a>
+	<br>
+	<a href="" class="exp-link">
+		<svg>
+			<use xlink:href="#arrow"></use>
+		</svg>
+		<span>Alle Reiseberichte</span>
+	</a>
+</div>
+
+<div class="block">
+	<h1>How it works</h1>
+	<div class="exp-how-it-works">
+		<div class="exp-how-it-works__item">
+			<svg class="exp-how-it-works__icon">
+				<use xlink:href="#heart-light-blue"></use>
+			</svg>
+			<div class="exp-how-it-works__content">
+				<span class="exp-how-it-works__step">01</span>
+				<p class="exp-how-it-works__desc">Teilen Sie uns Ihre Reisewünsche mit</p>
+				<a href="#" class="exp-how-it-works__btn exp-btn exp-btn_primary">Reise Anfragen</a>
+			</div>
+		</div>
+		<div class="exp-how-it-works__item">
+			<svg class="exp-how-it-works__icon">
+				<use xlink:href="#heart-yellow"></use>
+			</svg>
+			<div class="exp-how-it-works__content">
+				<span class="exp-how-it-works__step">02</span>
+				<p class="exp-how-it-works__desc">Ihr persönlicher Reiseberater plant Ihren individuellen
+					Traumurlaub</p>
+			</div>
+		</div>
+		<div class="exp-how-it-works__item">
+			<svg class="exp-how-it-works__icon">
+				<use xlink:href="#heart-light-blue"></use>
+			</svg>
+			<div class="exp-how-it-works__content">
+				<span class="exp-how-it-works__step">03</span>
+				<p class="exp-how-it-works__desc">Sie erhalten innerhalb von 24 Stunden ein für Sie maßgeschneidertes
+					Angebot</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="block">
+	<h1>Benefits</h1>
+	<div class="exp-benefits">
+		<div class="exp-benefits__wrap">
+			<div class="exp-benefits__item">
+				<div class="exp-benefits__content">
+					<svg>
+						<use xlink:href="#heart-light-blue"></use>
+					</svg>
+					<span>360° Beratung</span>
+					<p>Persönlich: vor Ort, per Mail, am Telefon</p>
+				</div>
+			</div>
+			<div class="exp-benefits__item">
+				<div class="exp-benefits__content">
+					<svg>
+						<use xlink:href="#heart-light-blue"></use>
+					</svg>
+					<span>Sorgenfrei Reisen</span>
+					<p>Wir begleiten Sie von der Idee bis zur Rückkehr</p>
+				</div>
+			</div>
+			<div class="exp-benefits__item">
+				<div class="exp-benefits__content">
+					<svg>
+						<use xlink:href="#heart-light-blue"></use>
+					</svg>
+					<span>Inspiration</span>
+					<p>Die gesamte Welt aus einer Hand</p>
+				</div>
+			</div>
+			<div class="exp-benefits__item">
+				<div class="exp-benefits__content">
+					<svg>
+						<use xlink:href="#heart-light-blue"></use>
+					</svg>
+					<span>Die passende Reise für jeden</span>
+					<p>Von exotischen Reisezielen über luxuriöse Strandresorts bis hin zum einfachen Flug</p>
+				</div>
+			</div>
+			<div class="exp-benefits__item">
+				<div class="exp-benefits__content">
+					<svg>
+						<use xlink:href="#heart-light-blue"></use>
+					</svg>
+					<span>Bleibende Erinnerungen</span>
+					<p>Einzigartige und begeisternde Reiseerlebnisse</p>
+				</div>
+			</div>
+			<div class="exp-benefits__item">
+				<div class="exp-benefits__content">
+					<svg>
+						<use xlink:href="#heart-light-blue"></use>
+					</svg>
+					<span>Tagesaktuelle Preise</span>
+					<p>Am Ende der Reiseplanung bleibt noch genug Reisebudget für Extras</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

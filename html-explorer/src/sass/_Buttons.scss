@@ -1,0 +1,31 @@
+.exp-btn {
+	display: block;
+	width: auto;
+	padding: 10px 18px;
+	border-radius: 8px;
+	font-family: $font-family-headers;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 100%;
+	letter-spacing: 0.75px;
+	color: $exa-white-secondary;
+	text-align: center;
+	border: none;
+	outline: none;
+	margin: 0;
+
+	&_primary {
+		background-color: $color-primary;
+		&:hover, &:focus {
+			background-color: $exa-yellow-700;
+			box-shadow: 0 0 0 4px $exa-yellow-100, inset 0 0 0 1px $exa-white-primary;
+		}
+	}
+
+	&_secondary {
+		background-color: $color-secondary;
+		&:hover, &:focus {
+			background-color: $exa-green-800;
+		}
+	}
+}

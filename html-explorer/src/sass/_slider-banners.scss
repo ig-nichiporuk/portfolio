@@ -1,0 +1,22 @@
+.exp-banner {
+	&__slider {
+		&-item {
+			padding: 0 14px;
+		}
+
+		&-content {
+			position: relative;
+			border-radius: 26px;
+			overflow: hidden;
+
+			.offer-label {
+				left: -46%;
+				top: 8%;
+			}
+
+			img {
+				height: 328px;
+			}
+		}
+	}
+}

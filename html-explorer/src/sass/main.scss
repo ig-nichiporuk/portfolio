@@ -1,0 +1,25 @@
+@import "global";
+@import "Restyle-slider-elems";
+@import "offer-label";
+@import "Buttons";
+@import "slider-card";
+@import "slider-offers";
+@import "slider-banners";
+@import "slider-experts";
+@import "slider-experts-on-roads";
+@import "header-with-line";
+@import "link-with-arrow";
+@import "how-it-works";
+@import "benefits";
+
+h1 {
+	margin-bottom: 32px;
+}
+.block {
+	margin: 0 40px;
+	padding: 24px;
+	border: 1px dotted #000;
+	& + & {
+		margin-top: 40px;
+	}
+}

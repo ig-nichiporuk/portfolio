@@ -1,0 +1,18 @@
+@import "variables";
+
+.offer-label {
+	position: absolute;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 10px 40px;
+	background: $color-primary;
+	transform: rotate(-45deg);
+	font-family: $font-family-headers;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight: 700;
+	letter-spacing: 0.75px;
+	text-transform: uppercase;
+	color: $exa-white-primary;
+}

@@ -1,0 +1,23 @@
+.exp-expert-on-roads {
+	&__item {
+		padding: 0 14px;
+
+		.slider-card {
+			padding-bottom: 28px;
+
+			&__img {
+				border-radius: 0;
+
+				img {
+					height: 204px;
+				}
+			}
+
+			&__title,
+			&__desc,
+			&__user {
+				padding: 0 28px;
+			}
+		}
+	}
+}

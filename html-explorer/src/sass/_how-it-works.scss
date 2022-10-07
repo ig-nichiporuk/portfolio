@@ -1,0 +1,68 @@
+@import "variables";
+
+.exp-how-it-works {
+	max-width: 760px;
+	margin: 0 auto;
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		&:first-child + & {
+			margin-top: 110px;
+		}
+
+		& + & {
+			margin-top: 50px;
+		}
+	}
+
+	&__icon {
+		width: 90px;
+		min-width: 90px;
+		height: 90px;
+		margin-right: 40px;
+	}
+
+	&__item:nth-child(2n) &__icon {
+		order: 1;
+		margin-left: 40px;
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 24px 36px;
+		background: $exa-white-secondary;
+		border-radius: 32px;
+		flex-grow: 1;
+		font-family: $font-family-content;
+	}
+
+	&__step {
+		font-family: $font-family-headers;
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: 700;
+		color: $exa-gray-500;
+		padding-right: 26px;
+		border-right: 1px solid $exa-gray-500;
+	}
+
+	&__desc {
+		margin-left: 26px;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.75px;
+		color: $text-input;
+	}
+
+	&__btn {
+		position: absolute;
+		right: 32px;
+		top: 90%;
+		width: 100%;
+		max-width: 330px;
+	}
+}

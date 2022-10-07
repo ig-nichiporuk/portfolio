@@ -1,0 +1,17 @@
+.exp-experts {
+	&__item {
+		padding: 0 14px;
+
+		.slider-card {
+			padding: 28px;
+
+			&__img {
+				border-radius: 12px;
+
+				img {
+					height: 176px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@import "variables";
+
+.exp-benefits {
+	max-width: 932px;
+	margin: 0 auto;
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -20px;
+	}
+	&__item {
+		width: calc(100% / 3);
+		padding: 20px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		min-height: 300px;
+		background: $exa-white-secondary;
+		border-radius: 26px;
+		padding: 20px 26px;
+
+		svg, span {
+			margin-bottom: 20px;
+		}
+		svg {
+			width: 70px;
+			height: 70px;
+		}
+
+		span {
+			font-family: $font-family-headers;
+			font-size: 20px;
+			line-height: 24px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			color: $exa-gray-700;
+		}
+
+		p {
+			font-family: $font-family-content;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.75px;
+			color: $text-content;
+		}
+	}
+}
